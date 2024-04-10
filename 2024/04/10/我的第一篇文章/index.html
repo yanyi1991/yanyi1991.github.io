@@ -27,6 +27,7 @@
   <!-- Custom Files headBegin begin-->
   
   <!-- Custom Files headBegin end-->
+    <link rel="shortcut icon" type='image/x-icon' href="https://gcore.jsdelivr.net/gh/xaoxuu/assets@master/favicon/favicon.ico">
   <link rel="preload" href="/css/style.css" as="style">
   <link rel="preload" href="https://unpkg.com/volantis-static@0.0.1660614606622/media/fonts/VarelaRound/VarelaRound-Regular.ttf" as="font" type="font/ttf" crossorigin="anonymous">
 <link rel="preload" href="https://unpkg.com/volantis-static@0.0.1660614606622/media/fonts/UbuntuMono/UbuntuMono-Regular.ttf" as="font" type="font/ttf" crossorigin="anonymous">
@@ -41,11 +42,11 @@
 <meta property="og:title" content="我的第一篇文章">
 <meta property="og:url" content="http://example.com/2024/04/10/%E6%88%91%E7%9A%84%E7%AC%AC%E4%B8%80%E7%AF%87%E6%96%87%E7%AB%A0/index.html">
 <meta property="og:site_name" content="YanYi Blog">
-<meta property="og:description" content="妍一的个人博客">
+<meta property="og:description" content="一. Java 简介Java 是第一大编程语言和开发平台。它有助于企业降低成本、缩短开发周期、推动创新以及改善应用服务。如今，Java 仍是企业和开发人员的首选开发平台，全球有数百万开发人员运行超过 51 亿台 Java 虚拟机。 1. JVM 它是 Java Virtual Machine 也就是 Java 虚拟机的缩写，它的职责是解释执行Java代码。我们写好的 Java 代码，并不能被直接运">
 <meta property="og:locale" content="en_US">
 <meta property="og:image" content="https://unpkg.com/volantis-static@0.0.1660614606622/media/org.volantis/blog/favicon/android-chrome-192x192.png">
 <meta property="article:published_time" content="2024-04-10T12:06:48.000Z">
-<meta property="article:modified_time" content="2024-04-10T12:06:48.649Z">
+<meta property="article:modified_time" content="2024-04-10T13:45:40.782Z">
 <meta property="article:author" content="YanYi">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:image" content="https://unpkg.com/volantis-static@0.0.1660614606622/media/org.volantis/blog/favicon/android-chrome-192x192.png">
@@ -2158,7 +2159,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
     root: '/',
     debug: "env",
     default: {"avatar":"https://unpkg.com/volantis-static@0.0.1660614606622/media/placeholder/avatar/round/3442075.svg","link":"https://unpkg.com/volantis-static@0.0.1660614606622/media/placeholder/link/8f277b4ee0ecd.svg","cover":"https://unpkg.com/volantis-static@0.0.1660614606622/media/placeholder/cover/76b86c0226ffd.svg","image":"https://unpkg.com/volantis-static@0.0.1660614606622/media/placeholder/image/2659360.svg"},
-    lastupdate: new Date(1712755175923),
+    lastupdate: new Date(1712756761284),
     cdn: {
       izitoast_css: 'https://cdn.bootcdn.net/ajax/libs/izitoast/1.4.0/css/iziToast.min.css',
       izitoast_js: 'https://cdn.bootcdn.net/ajax/libs/izitoast/1.4.0/js/iziToast.min.js',
@@ -2612,7 +2613,423 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 
   <div id="layoutHelper-page-plugins"></div>
   <div id="post-body" itemprop="articleBody">
-    
+    <h1 id="一-Java-简介"><a href="#一-Java-简介" class="headerlink" title="一. Java 简介"></a>一. Java 简介</h1><p>Java 是第一大编程语言和开发平台。它有助于企业降低成本、缩短开发周期、推动创新以及改善应用服务。如今，Java 仍是企业和开发人员的首选开发平台，全球有数百万开发人员运行超过 51 亿台 Java 虚拟机。</p>
+<h2 id="1-JVM"><a href="#1-JVM" class="headerlink" title="1. JVM"></a>1. JVM</h2><ul>
+<li>它是 Java Virtual Machine 也就是 Java 虚拟机的缩写，它的职责是解释执行Java代码。我们写好的 Java 代码，并不能被直接运行，而是需要交给 JVM 来解释执行</li>
+<li>很多公司都提供了 JVM 实现，最为知名的是 Oracle 提供的 JVM 实现</li>
+</ul>
+<h2 id="2-JRE"><a href="#2-JRE" class="headerlink" title="2. JRE"></a>2. JRE</h2><ul>
+<li>JRE呢，是 Java runtime environment 的缩写，含义是 Java 的运行环境。Java 代码编写好了以后，不仅是需要 JVM 对它来进行解释，而且也需要一些基础功能的配合，这些基础功能呢，称之为核心类库（Core libraries），JVM 和核心类库加在一起，就构成了 JRE 这个运行环境</li>
+</ul>
+<h2 id="3-JDK"><a href="#3-JDK" class="headerlink" title="3. JDK"></a>3. JDK</h2><ul>
+<li>JDK是 Java development kit 的缩写，含义是 Java 的开发环境。如果你不仅仅要运行 Java 程序，还想开发新的 Java 程序，那还需要借助一些开发工具，JRE 跟开发工具合在一起，就构成了JDK</li>
+</ul>
+<p></p>
+<p>通过刚才的讲解，我们了解到 JVM、JRE、JDK 之间是一个包含的关系：</p>
+<ul>
+<li>JDK 功能最全，包含了 JRE 和开发工具</li>
+<li>其次是 JRE，包含了 JVM + 核心类库</li>
+<li>最后是 JVM，负责解释执行我们的 Java 代码</li>
+</ul>
+<p>因此，对于后面的学习，我们只需要下载安装 JDK 就可以进行 Java 开发了</p>
+<blockquote>
+<p>从 Java 11 这个版本开始，不再单独提供 JRE</p>
+<ul>
+<li>In this release, the JRE or Server JRE is no longer offered. Only the JDK is offered. Users can use <code>jlink</code> to create smaller custom runtimes.</li>
+</ul>
+</blockquote>
+<h1 id="二-安装-JDK"><a href="#二-安装-JDK" class="headerlink" title="二. 安装 JDK"></a>二. 安装 JDK</h1><h2 id="1-下载和安装"><a href="#1-下载和安装" class="headerlink" title="1. 下载和安装"></a>1. 下载和安装</h2><p>这里介绍 Windows 10 平台下 Oracle 的 JDK 安装</p>
+<p>入口在哪儿？访问 oracle 官网 <a target="_blank" rel="noopener" href="https://www.oracle.com/index.html">Oracle | Cloud Applications and Cloud Platform</a></p>
+<p></p>
+<p>点击 Java 后进入下面的页面</p>
+<p></p>
+<p>下载页面让我们选择版本，这里选择 Java 17，因为它是长期支持版（LTS）</p>
+<ul>
+<li>18 虽然看着新，但实际上到 2022.9 就会被 19 取代</li>
+<li>而 17 的支持会到 2024 年</li>
+</ul>
+<p>接下来选择平台，这里选择 Windows，其它平台下 JDK 的安装，请关注我们后续的视频</p>
+<p>Windows 有三个版本，第一个是解压版，后两个是安装版。初学者我建议下载解压版（有助于理解 java 程序的查找过程）</p>
+<p></p>
+<p>下载完毕后，解压到一个<strong>没有中文和空格</strong>的目录即可</p>
+<h2 id="2-配置-Path"><a href="#2-配置-Path" class="headerlink" title="2. 配置 Path"></a>2. 配置 Path</h2><p>你可以选择一个喜欢的目录，我的解压目录是 d 盘根目录下，如图所示</p>
+<ul>
+<li>其中 bin 目录下包含的就是它所带的一些开发和运行工具</li>
+<li>像 Javac.exe 还有 Java.exe 都是较为重要的，后面都会用到</li>
+</ul>
+<p></p>
+<p>验证安装是否成功：按快捷键 <code>Win + r</code>，输入命令提示符程序名称 <code>cmd</code></p>
+<p></p>
+<p>出现命令提示符窗口，输入 <code>java -version</code><br>    C:\Users\Lenovo&gt;java<br>    ‘java’ 不是内部或外部命令，也不是可运行的程序<br>    或批处理文件。</p>
+<p>这是因为 cmd 程序并不知道 java 的安装位置，因此没有找到它</p>
+<ul>
+<li><p>可以输入它的全路径来找到它</p>
+<ul>
+<li>比如，我的 java 解压到了 D:\jdk-17.0.3.1 这个目录，这时全路径就是 D:\jdk-17.0.3.1\bin\java</li>
+<li>但显然这么做比较麻烦</li>
+</ul>
+</li>
+<li><p>更好的方式是配置 Path【环境变量】</p>
+</li>
+</ul>
+<p>按快捷键 <code>win</code> 搜索【此电脑】，出现下面的界面</p>
+<p></p>
+<p>点击【属性】，找到【高级系统设置】</p>
+<p></p>
+<p>按下图箭头顺序找到<strong>新建</strong>，把刚才 jdk 的解压目录 + bin 补充填入，我这里是 D:\jdk-17.0.3.1\bin，全部确定。</p>
+<p></p>
+<blockquote>
+<p>Path 环境变量的作用：</p>
+<ul>
+<li>Path 环境变量中记录的是程序执行时的搜索路径</li>
+<li>cmd 执行一个程序时，即使未给出完整路径，也会在 Path 环境变量列出的目录下依次查找该程序<ul>
+<li>找到了，则执行</li>
+<li>都找不到，才报错</li>
+</ul>
+</li>
+<li>因此对刚才的问题，只需将 java 程序的所在目录补充进 Path 环境变量</li>
+</ul>
+</blockquote>
+<p>环境变量改动后，原有的 cmd 窗口是不受影响的，要想生效<strong>必须</strong>打开一个新的 cmd 窗口，输入 <code>java -version</code>，如果出现类似于下面的输出，表示成功<br>    C:\Users\Lenovo&gt;java -version<br>    java version “17.0.2” 2022-01-18 LTS<br>    Java(TM) SE Runtime Environment (build 17.0.2+8-LTS-86)<br>    Java HotSpot(TM) 64-Bit Server VM (build 17.0.2+8-LTS-86, mixed mode, sharing)</p>
+<h2 id="3-配置-JAVA-HOME（选讲）"><a href="#3-配置-JAVA-HOME（选讲）" class="headerlink" title="3. 配置 JAVA_HOME（选讲）"></a>3. 配置 JAVA_HOME（选讲）</h2><p>网上的一些教程，都会让大家配置另一个叫做 JAVA_HOME 的环境变量，代表的是 JDK 的安装根目录。</p>
+<ul>
+<li>其实这个环境变量你可以不配，对于后续学习几乎没有影响</li>
+<li>例外情况是，有的 java 程序，例如后面学到的 Tomcat 在启动时，会用到 JAVA_HOME 环境变量，但这属于个别现象，等我们学到它时再解决不迟</li>
+<li>还有一个不配 JAVA_HOME 的理由：如果将来有不同的应用运行需要版本的 JDK，这时还不如不配全局 JAVA_HOME，让每个程序在启动脚本里指定自己需要的 JAVA_HOME</li>
+</ul>
+<p>出于知识的完整性，我们演示一下如何配置 JAVA_HOME，还是找到环境变量的配置窗口，在系统环境变量处点击新建，输入变量名和变量值，JAVA_HOME 名称是固定的，注意全大写，值是 JDK 的安装根目录，我这里是 D:\jdk-17.0.3.1</p>
+<h3 id="优化"><a href="#优化" class="headerlink" title="优化"></a>优化</h3><p>配完之后，发现 PATH 环境变量中的 D:\jdk-17.0.3.1\bin 与 JAVA_HOME 中的 D:\jdk-17.0.3.1 有一部分重复了，这样的问题是如果将来切换 jdk 版本，如果改了一处，忘记改另一处，就会造成不一致。</p>
+<p>可以把 PATH 的取值修改为 %JAVA_HOME%\bin，其中 %JAVA_HOME% 代表引用 JAVA_HOME 环境变量的值，这样以后改动时，只需要改 JAVA_HOME 这一处就可以了</p>
+<h1 id="三-入门案例"><a href="#三-入门案例" class="headerlink" title="三. 入门案例"></a>三. 入门案例</h1><p>这节课我们来学习 Java 的第一个入门程序，Hello world，目标是<strong>命令</strong> jvm，在程序窗口输出一行问候语。</p>
+<h2 id="1-第一行代码"><a href="#1-第一行代码" class="headerlink" title="1. 第一行代码"></a>1. 第一行代码</h2><h3 id="1-jshell"><a href="#1-jshell" class="headerlink" title="1) jshell"></a>1) jshell</h3><p>首先用到的是一个名为 jshell 的开发工具，打开命令提示符 cmd，输入 jshell<br>    PS D:&gt; jshell<br>    |  欢迎使用 JShell – 版本 17.0.2<br>    |  要大致了解该版本, 请键入: &#x2F;help intro</p>
+<pre><code>jshell&gt;
+</code></pre>
+<p>可以看到【jshell&gt;】后的光标在不断闪烁，表示可以继续在【jshell&gt;】后键入命令或代码</p>
+<p>常见命令</p>
+<ul>
+<li>&#x2F;help 帮助信息</li>
+<li>&#x2F;exit 退出 jshell</li>
+</ul>
+<p>第一行代码来了：输入 <code>System.out.println(&quot;Hello, world&quot;)</code>，要注意大小写和引号，查看效果</p>
+<h3 id="2-代码解读"><a href="#2-代码解读" class="headerlink" title="2) 代码解读"></a>2) 代码解读</h3><p>下面来解释这行代码的意思</p>
+<ul>
+<li>它的整体效果是命令 JVM，给我在在程序窗口输出一行话，话的内容是：<code>Hello, world</code></li>
+</ul>
+<p>再来把代码拆解，看看每一部分的意思</p>
+<ul>
+<li><p>先要说明的是，咱们这个程序窗口内有两个较为抽象的组成部分，输出和输入</p>
+<ul>
+<li><p>其中输出的专业叫法是【标准输出】，用来将运算结果展现给用户，代码里就对应着 System.out</p>
+</li>
+<li><p>另一个是【标准输入】，用来接受用户输入的数据，代码里用 System.in 表示，后面再讲</p>
+</li>
+<li><p>System.out 、System.in 代表的这种计算机中的虚拟物体，以后统称之为【对象】</p>
+</li>
+<li><p>System.out 这个对象是 java 为我们提前准备好的</p>
+</li>
+<li><p>以后还有一些对象是需要我们自己创建的，后面会逐渐讲到</p>
+</li>
+</ul>
+</li>
+</ul>
+<p>但是光是拿到 System.out 对象，它并不会显示 Hello, world，我们必须给它下命令，也就是调用对象的功能</p>
+<ul>
+<li>println() 代表的是 System.out 中的一种功能，以后称之为【方法】<ul>
+<li>方法的特征是在使用时会带有一对 ()</li>
+<li>不同的方法作用不同，println 方法的作用是将 () 内的内容展现到程序窗口并换行，System.out 对象还有 print 方法，区别是不换行输出内容</li>
+<li>前面的点，表示一种从属关系<ul>
+<li>即 println() 方法从属于 System.out 对象，print 方法也从属于 System.out 对象</li>
+<li>从属关系决定了对象能否使用此方法，像 System.in 与 println 方法之间没有这种从属关系，就意味着 System.in 对象无法使用此 println 方法</li>
+<li>想知道对象和哪些方法之间有从属关系，后面会给大家讲解怎么查，目前了解这些足够了</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>() 里面的 <code>&quot;hello, world&quot;</code> 叫做方法参数，你可以替换它为其它问候语<ul>
+<li>不同的方法需要的参数个数及格式也有所不同，刚才我们用的这个 println 方法只接收了一个参数，以后大家可能见到不同个数和格式的参数，这些后面都会详细讲解</li>
+</ul>
+</li>
+</ul>
+<h4 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h4><p>从这行代码中学习了什么呀，要命令计算机执行功能，可以借助【对象】、【方法】和【参数】来完成</p>
+<ul>
+<li><p>刚才的例子中谁是对象？</p>
+<ul>
+<li>System.out</li>
+</ul>
+</li>
+<li><p>它代表什么？</p>
+<ul>
+<li>标准输出</li>
+</ul>
+</li>
+<li><p>谁是方法？</p>
+<ul>
+<li>println 是方法</li>
+</ul>
+</li>
+<li><p>它有什么作用？</p>
+<ul>
+<li>不同方法作用不同，println 将括号内内容，也就是参数输出到程序窗口</li>
+<li>这其中参数比较自由，由我们提供，可以是 hello, world, 可以是你好，也可以是其它问候语</li>
+</ul>
+</li>
+<li><p>对象和方法是 java 提供的（当然以后我们也可以自己创建对象，定义新的方法，此乃后话）</p>
+</li>
+</ul>
+<p>至此为止，这行代码的含义讲解完毕</p>
+<h3 id="3-为何要分成对象与方法"><a href="#3-为何要分成对象与方法" class="headerlink" title="3) 为何要分成对象与方法"></a>3) 为何要分成对象与方法</h3><p>有同学问：Java的设计者搞个输出都这么麻烦，还分成对象和方法俩概念，把它们合为一个概念不是更简单吗？你看</p>
+<ul>
+<li>对象用来表示被操作的物体，是名词</li>
+<li>方法用来告知让这个物体执行什么动作，是动词</li>
+</ul>
+<p>这种划分更符合现实世界中对事物的认知，例如，你叫住【皮卡丘】，皮卡丘就是待操作的对象，这时候他还不知道要做什么。好，你命令他【趴下】，这个趴下就是方法，是皮卡丘要执行的动作，你再命令他【吃饭】，这个吃饭是另一个方法。可以看到，现实世界都可以这么划分，那么把计算机中的虚拟物体抽象成对象和方法，当然也是顺理成章啦，这符合人类对事物的认知。</p>
+<p>因此，不要怕麻烦，以后在 java 世界编写的代码，绝大多数都是这种对象+方法的形式，这称之为<strong>面向对象编程</strong>，今天我们还不会正式讲解面向对象编程，但同学们要建立起对象、方法的概念</p>
+<h2 id="2-第一份源码"><a href="#2-第一份源码" class="headerlink" title="2. 第一份源码"></a>2. 第一份源码</h2><p>jshell 执行过的代码，在 jshell 退出后下次再想用，就不方便调出来了，正式的代码都会保存在类文件中，类文件的后缀是 .java，也称为 java 源代码</p>
+<h3 id="1-源码结构"><a href="#1-源码结构" class="headerlink" title="1) 源码结构"></a>1) 源码结构</h3><p>源码结构如下，一份源码中可以包含多个类，每个类中又可以包含多个方法，方法内再包含语句代码<br>    class A {<br>        方法1() {<br>            &#x2F;&#x2F; 语句代码<br>        }</p>
+<pre><code>    方法2() &#123;
+        // 语句代码
+    &#125;
+
+    入口方法() &#123;
+        // 语句代码
+    &#125;
+&#125;
+
+class B &#123;
+
+&#125;
+</code></pre>
+<p>这里我们关注其中一个特殊方法：入口方法。</p>
+<p>入口方法的格式是固定的：<br>    public static void main(String[] args) {</p>
+<pre><code>&#125;
+</code></pre>
+<p>以后我们就称它为 main 方法</p>
+<ul>
+<li>main 并不从属于任何对象（由 static 修饰）</li>
+<li>main 方法内就可以书写之前学过的那行代码 System.out.println(“Hello, world”)</li>
+<li>要注意与之前 jshell 中一点区别是，这里的每行代码以分号结束</li>
+</ul>
+<p>刚才给大家介绍了源代码的结构</p>
+<ul>
+<li>源代码中可以包含多个 class 类，每个类中再去套方法，方法内再去套代码，当我们把这些写好之后，能不能交给 JVM 来执行呢？</li>
+<li>还不行，因为JVM不理解源码，需要通过 javac 开发工具把源代码编译成 class 字节码文件（这种字节码JVM可以理解）字节码文件的特点是后缀以 .class 结尾</li>
+<li>最后再通过 java 工具可以将 class 字节码加载至 JVM，JVM 将字节码解释翻译为机器码，最终就可以由 CPU 执行啦。</li>
+</ul>
+<h3 id="2-编写-java-源代码"><a href="#2-编写-java-源代码" class="headerlink" title="2) 编写 java 源代码"></a>2) 编写 java 源代码</h3><p>进入 <code>d:</code> 盘</p>
+<ul>
+<li>目的是为了找到一个合适存储 java 源代码的位置，也可以是其他位置，总之方便你找到它<br>  C:\Users\Lenovo&gt;d:<br>  D:&gt;</li>
+</ul>
+<p>运行记事本程序，notepad 是记事本程序名称<br>    D:&gt;notepad</p>
+<p>会打开如下窗口</p>
+<p></p>
+<p>输入如下代码<br>    class Hello {<br>        public static void main(String[] args) {<br>            System.out.println(“hello, world”);<br>        }<br>    }</p>
+<ul>
+<li><code>&quot;&quot;</code> 内的 hello, world 是我们自由书写，可以是英文、汉字</li>
+<li><code>class</code> 后的 Hello 称之为【类名】，一般是英文单词</li>
+<li>其余代码要与例子中的【完全一致】，并严格区分大小写</li>
+</ul>
+<p>保存文件，选择 <code>文件-&gt;保存</code> 或按它对应的快捷键 <code>Ctrl+S</code></p>
+<p></p>
+<ul>
+<li>类名与最后的文件名请保持一致，保存为文件名以 <code>.java</code> 结尾</li>
+<li>保存文件时，确保也存储于 <code>d:</code> 盘，方便待会找到它</li>
+<li>编码位置也要注意，可能会影响到汉字的输出，后面会讲</li>
+</ul>
+<h3 id="3-编译-java-源代码"><a href="#3-编译-java-源代码" class="headerlink" title="3) 编译 java 源代码"></a>3) 编译 java 源代码</h3><p>关闭记事本程序，回到命令提示符程序，输入下面命令<br>    D:&gt;javac Hello.java</p>
+<ul>
+<li><p><code>javac</code> 用来把一个 <code>*.java</code> 文件编译成 <code>*.class</code> 文件</p>
+</li>
+<li><p><code>*.class</code> 就是前面提到的 class 字节码</p>
+</li>
+</ul>
+<p>本例中，生成的字节码文件为 <code>Hello.class</code>，可以用 <code>dir</code> 命令查阅如下</p>
+<p></p>
+<h3 id="4-运行-class-字节码"><a href="#4-运行-class-字节码" class="headerlink" title="4) 运行 class 字节码"></a>4) 运行 class 字节码</h3><p>输入下面命令<br>    D:&gt;java Hello<br>    hello, world</p>
+<ul>
+<li><code>java</code> 命令用来把 Hello.class 加载到 JVM 并执行它</li>
+</ul>
+<h2 id="3-常见问题"><a href="#3-常见问题" class="headerlink" title="3. 常见问题"></a>3. 常见问题</h2><h3 id="中文输出乱码"><a href="#中文输出乱码" class="headerlink" title="中文输出乱码"></a>中文输出乱码</h3><p>有的同学编写代码时用了中文<br>    class Hello {<br>        public static void main(String[] args) {<br>            System.out.println(“你好”);<br>        }<br>    }</p>
+<p>编译、执行后输出为<br>    浣犲ソ</p>
+<blockquote>
+<p>发音：huan chai so</p>
+</blockquote>
+<p>原因在于，保存 Hello.java 文件时，选择了 UTF-8 编码，而 javac 编译时采用的是操作系统默认编码 GBK，只要两边编码不一致，就会发生上述的【乱码】问题</p>
+<h4 id="解决方法1"><a href="#解决方法1" class="headerlink" title="解决方法1"></a>解决方法1</h4><p>保存文件时，选择编码为 ANSI（对于记事本程序 ANSI 其实就是 GBK）</p>
+<p></p>
+<h4 id="解决方法2"><a href="#解决方法2" class="headerlink" title="解决方法2"></a>解决方法2</h4><p>文件保存时，编码仍然是 UTF-8 不变，编译时改用下面的命令明确告诉编译器，编译时别用默认的 GBK，改用 UTF-8<br>    D:&gt;javac -encoding utf-8 Hello.java</p>
+<h3 id="编译错误"><a href="#编译错误" class="headerlink" title="编译错误"></a>编译错误</h3><p>有的同学在执行 javac 时会遇到各种各样的问题，例如<br>    D:&gt;javac -encoding utf-8 Hello.java<br>    Hello.java:3: 错误: 非法字符: ‘\uff1b’<br>            System.out.println(“你好”)；<br>                                             ^<br>    1 个错误</p>
+<p>遇到这种错误不用怕</p>
+<ul>
+<li>其中 <code>Hello.java:3</code> 意思是说，Hello.java 中第 3 行出现错误，这样就可以定位错误位置</li>
+<li>接下来它又提示了具体错误原因：<code>错误: 非法字符: &#39;\uff1b&#39;</code>，本例中是因为输入了中文分号 <code>；</code>，java 语法要求语句结束符号是英文分号 <code>;</code></li>
+<li>这些错误原因需要慢慢积累，见的多了就知道该怎么解决了</li>
+</ul>
+<h2 id="4-注释"><a href="#4-注释" class="headerlink" title="4. 注释"></a>4. 注释</h2><p>注释就是对程序代码的一个说明，比如：</p>
+<ul>
+<li>将来写的代码多了，你记性又没那么好，怕忘记某些代码的含义，这时候可以给它加一个注释</li>
+<li>或是某些代码比较重要、特殊，这时也可以加一个注释进行说明</li>
+</ul>
+<p>强调一点，注释只是对代码的说明，只影响代码阅读，不影响代码的功能。</p>
+<p>注释的格式分成了单行注释，多行注释，还有文档注释三种。</p>
+<h3 id="单行注释"><a href="#单行注释" class="headerlink" title="单行注释"></a>单行注释</h3><p>写在被注释代码的上方或右方，格式为<br>    &#x2F;&#x2F; 注释内容</p>
+<h3 id="多行注释"><a href="#多行注释" class="headerlink" title="多行注释"></a>多行注释</h3><p>如果注释内容比较长，都写在一行影响阅读，这时候就用多行注释，格式为<br>    &#x2F;*<br>        注释内容<br>        注释内容<br>    *&#x2F;</p>
+<h3 id="文档注释"><a href="#文档注释" class="headerlink" title="文档注释"></a>文档注释</h3><p>文档注释我们后面讲方法时再详细来讲吧，那现在呢，你只要了解它的格式：格式为：<br>    &#x2F;**<br>        注释内容<br>    *&#x2F;</p>
+<h2 id="5-思考-为何需要字节码"><a href="#5-思考-为何需要字节码" class="headerlink" title="5. 思考-为何需要字节码"></a>5. 思考-为何需要字节码</h2><p>咱们先回忆一下 Java 程序的开发以及运行的流程</p>
+<ul>
+<li>首先得编写一个Java的源文件，源文件编写好了就能交给CPU来执行吗？</li>
+<li>还不行啊，他得经过一个编译的步骤，也就是用那个javac程序把它编译成字节码文件</li>
+<li>这个字节码文件呢，再经过一个叫 java 程序加载到 jvm 虚拟机，</li>
+<li>jvm 虚拟机其实还做了一件很重要的事，就是把字节码文件给解释成机器码</li>
+<li>机器码就是最为底层的代码了，CPU就可以识别和运行它</li>
+</ul>
+<p>所以整个流程是先把源文件变成字节码，再把字节码变成机器码，最终由CPU执行。</p>
+<p>那这里大家可以思考这么一个问题，源代码，最终要变成机器码，是不是才能被CPU执行，那为什么我们不直接把Java 源码翻译成机器代码，而是多出了字节码这么一个中间环节呢？</p>
+<h3 id="C-的翻译过程"><a href="#C-的翻译过程" class="headerlink" title="C++ 的翻译过程"></a>C++ 的翻译过程</h3><p>要解释清楚这个问题啊，我们就必须介绍一点历史。在Java语言发明之前呢，有一个比较流行的编程语言叫做c++语言，这个c++语言它就没有中间的环节，可以把源文件直接他翻译成最终的机器码。有同学说这不挺好？但是呢有这么一个问题：不同平台下的这个机器码是不通用的。</p>
+<p>举个例子，在windows平台下编写好了c++源代码，可以把它经编译器编译为windows平台的机器码，但是这个机器码呢，只能用在windows平台。想拿到Linux平台下用，用不了。必须在 Linux 平台下，重新编译成Linux机器码。看看这样的缺点</p>
+<ol>
+<li>项目规模大了，源码编译也挺耗时间，在 windows 下编译一遍比如用了 20 分钟，测试通过了，将来要部署到 Linux 平台，又得编译一遍，再花 20 分钟… 时间都花在编译上了</li>
+<li>程序员还得熟悉两个平台，做不到开发与部署环境相分离</li>
+</ol>
+<p>说完了这是c++程序需要多次编译缺点，那咱们再来看看 Java 是怎么解决这个问题的。</p>
+<p></p>
+<h3 id="Java-的翻译过程"><a href="#Java-的翻译过程" class="headerlink" title="Java 的翻译过程"></a>Java 的翻译过程</h3><p>Java做的就是加入了字节码这个中间环节，不管是在Linux下的编译还是在windows下的编译，生成的字节码是所有平台都通用的，你在windows平台生成的字节码在Linux平台一样用，反之亦然。可以看到</p>
+<ol>
+<li>编译只需要一次，编译时间被节省了</li>
+<li>程序员只需要工作在自己熟悉的平台上就可以了，做到了开发与部署环境的分离</li>
+</ol>
+<p>这就是 java 所宣称的 write once run anywhere，编写一次，到处运行。</p>
+<p>字节码虽然带来了这样一些便利，但大家思考一下，有什么问题吗？</p>
+<p>对啦，问题就是字节码不是最终的机器码</p>
+<ul>
+<li>需要在每个平台上安装 jvm 虚拟机，负责把字节码解释为机器码</li>
+<li>另外因为引入了把字节码解释为机器码的步骤，性能上会有一定损失，当然 jvm 为了保证性能，内部会做很多优化，这等我们讲到 jvm 时，会有更深入的认识</li>
+</ul>
+<p></p>
+<h3 id="小结"><a href="#小结" class="headerlink" title="小结"></a>小结</h3><p>通过初步对比 c++ 和 java 的不同编译策略，我们学习到一个词 trade-off，权衡。</p>
+<ul>
+<li>c++ 直接编译生成机器码，性能无与伦比，但一旦改变平台，会带来额外的编译成本</li>
+<li>java 编译生成字节码，减少编译成本，增强灵活性，但性能不可避免受到影响，需要再通过其它方面补救</li>
+</ul>
+<p>以后大家如果进入到程序设计的领域，就会明白，所谓设计更多的是在各个方面做出权衡，没有最佳，只有最适合。</p>
+<h1 id="四-IDE-工具"><a href="#四-IDE-工具" class="headerlink" title="四. IDE 工具"></a>四. IDE 工具</h1><p>俗话说，工欲善其事，必先利其器，要准备好开发工具，才能提高开发效率。如果像开始那样，用记事本编写 java 代码，不仅慢，而且很容易出错。</p>
+<p>首先来介绍 IDE 工具，IDE 即 Integrated Development Environment 集成开发环境，能够提供给开发者更好的编码、编译、测试环境</p>
+<h2 id="1-常见-IDE-工具"><a href="#1-常见-IDE-工具" class="headerlink" title="1. 常见 IDE 工具"></a>1. 常见 IDE 工具</h2><h3 id="Eclipse"><a href="#Eclipse" class="headerlink" title="Eclipse"></a>Eclipse</h3><p>老牌的 IDE 工具 Eclipse，有需要的同学可以根据下图下载尝试（<a target="_blank" rel="noopener" href="https://www.eclipse.org/downloads/">Eclipse Downloads | The Eclipse Foundation</a>）</p>
+<p></p>
+<p>它的特点是</p>
+<ul>
+<li>完全免费</li>
+<li>功能够用</li>
+</ul>
+<h3 id="Vscode"><a href="#Vscode" class="headerlink" title="Vscode"></a>Vscode</h3><p>以上两个工具属于<strong>重量级</strong>的 IDE 工具，如果想追求轻量级的工具，推荐使用 Visual Studio Code</p>
+<p></p>
+<p>它的特点有</p>
+<ul>
+<li>完全免费</li>
+<li>更为轻量，占用磁盘空间比 eclipse 和 idea 少很多，前面两个工具属于重量级 ide 工具</li>
+<li>系出名门，微软开发</li>
+<li>插件丰富，通过插件几乎可以支持所有语言</li>
+</ul>
+<p>最后要介绍的一个 IDE 工具叫 Intellij IDEA，号称是最智能的 java 开发工具</p>
+<h3 id="IntelliJ-IDEA"><a href="#IntelliJ-IDEA" class="headerlink" title="IntelliJ IDEA"></a>IntelliJ IDEA</h3><p>新流行的 IDE 工具 IntelliJ IDEA，推荐大家用它（<a target="_blank" rel="noopener" href="https://www.jetbrains.com/zh-cn/idea/download/#section=windows">下载 IntelliJ IDEA：JetBrains 功能强大、符合人体工程学的 Java IDE</a>）</p>
+<p></p>
+<p>它有三个版本</p>
+<ul>
+<li>Ultimate（最终版），功能最强，按年收费，价格不菲</li>
+<li>Community（社区版），功能够用</li>
+<li>如果你是在校学生，可以申请教育版<ul>
+<li><a target="_blank" rel="noopener" href="https://www.jianshu.com/p/fc56eadc7faf">通过教育邮箱免费申请IntelliJ IDE全家桶教程 - 简书 (jianshu.com)</a></li>
+</ul>
+</li>
+</ul>
+<p>特点</p>
+<ul>
+<li>更加智能</li>
+</ul>
+<p>因为我不想花钱，下载的是社区版，另外我选择的这种zip压缩格式的安装包，它使用起来更加简单，解压就能用</p>
+<p>使用步骤</p>
+<ul>
+<li><p>选中下载好的压缩文件，解压，这里解压到 d：盘，注意保留后面的文件夹名称</p>
+</li>
+<li><p>进入d盘，进入解压目录中 bin子目录，找到一个名叫 idea64的程序双击，就可以运行了。</p>
+</li>
+</ul>
+<h2 id="2-IntelliJ-IDEA-的配置及使用"><a href="#2-IntelliJ-IDEA-的配置及使用" class="headerlink" title="2. IntelliJ IDEA 的配置及使用"></a>2. IntelliJ IDEA 的配置及使用</h2><p>本教程使用 IntelliJ IDEA Community 2022.1（截至本教程开始开发时的最新版本）</p>
+<h3 id="1-安装启动"><a href="#1-安装启动" class="headerlink" title="1) 安装启动"></a>1) 安装启动</h3><p>首次运行，会弹出下面窗口</p>
+<p></p>
+<p>意思是是否导入以前的设置（settings），因为我们是第一次安装，所以就选择默认的不导入设置</p>
+<p>出现 splash 欢迎页</p>
+<p></p>
+<p>接下来进入主界面</p>
+<p></p>
+<p>在学习 idea 之前，先来做几项简单的设置，可以改改颜色主题（<code>Customize -&gt; Color theme</code>）</p>
+<p></p>
+<p>如果选择 <code>Sync with OS</code>，意思就是根据操作系统改变主题（白天亮、夜晚暗）</p>
+<p></p>
+<p>推荐安装翻译插件，方便阅读文档</p>
+<p></p>
+<h3 id="2-创建项目"><a href="#2-创建项目" class="headerlink" title="2) 创建项目"></a>2) 创建项目</h3><p>创建新项目（Project）</p>
+<p></p>
+<p>在 IDEA 中【项目】和【模块】用来组织代码</p>
+<ul>
+<li>一个【项目】（Project）包含多个【模块】（Module）</li>
+<li>一个【模块】（Module）包含多个【源文件】</li>
+</ul>
+<p>点击【新建项目】（New Project）后出现界面</p>
+<p></p>
+<p>其中</p>
+<ul>
+<li>存储位置中的 <code>~</code> 代表当前用户目录<ul>
+<li>如我的 Windows 系统用户名为 <code>Lenovo</code>，则 <code>~</code> 对应目录为 <code>C:\Users\Lenovo</code></li>
+<li>你也可以选择其它目录来存储【项目】位置，但注意目录中不建议有中文和空格</li>
+</ul>
+</li>
+<li>语言这目前选择 <code>Java</code>，但要知道 JVM 还能运行其它几种语言：<code>Kotlin</code> 和 <code>Groovy</code></li>
+<li>项目类型目前选择 <code>IntelliJ</code>，后续我们还会学习 <code>Maven</code> 和 <code>Gradle</code></li>
+<li>如果安装了 JDK，会出现在这个下拉列表中</li>
+<li>如果勾选了 <code>Add sample code</code>，则会生成一个简单的实例代码</li>
+</ul>
+<p>点击 <code>Create</code> 按钮后</p>
+<p></p>
+<p>首次进入项目会在右下角显示两个弹窗通知</p>
+<p></p>
+<p>建议都点一下</p>
+<ul>
+<li>前者能将 IntelliJ IDEA 的菜单中文化</li>
+<li>后者能加速 IDEA 的使用速度</li>
+</ul>
+<p>因为前面勾选了实例代码，因此 idea 已经帮我们生成了一个简单的源文件，看一下，里面已经包含了类、main 方法和一段 hello world 代码。</p>
+<h3 id="3-运行代码"><a href="#3-运行代码" class="headerlink" title="3) 运行代码"></a>3) 运行代码</h3><p></p>
+<h1 id="五-实用工具"><a href="#五-实用工具" class="headerlink" title="五. 实用工具"></a>五. 实用工具</h1><h2 id="1-Ubuntu-子系统"><a href="#1-Ubuntu-子系统" class="headerlink" title="1. Ubuntu 子系统"></a>1. Ubuntu 子系统</h2><p>如果用 Windows 操作系统，推荐安装 Linux 子系统，即 WSL</p>
+<ul>
+<li>适用于 Linux 的 Windows 子系统可让开发人员按原样运行 GNU&#x2F;Linux 环境 - 包括大多数命令行工具、实用工具和应用程序 - 且不会产生传统虚拟机或双启动设置开销</li>
+<li>官方安装文档：<a target="_blank" rel="noopener" href="https://docs.microsoft.com/zh-cn/windows/wsl/install">安装 WSL | Microsoft Docs</a></li>
+</ul>
+<h3 id="1-安装-wsl-工具"><a href="#1-安装-wsl-工具" class="headerlink" title="1) 安装 wsl 工具"></a>1) 安装 wsl 工具</h3><pre><code>wsl --install
+</code></pre>
+<h3 id="2-安装-Ubuntu-子系统"><a href="#2-安装-Ubuntu-子系统" class="headerlink" title="2) 安装 Ubuntu 子系统"></a>2) 安装 Ubuntu 子系统</h3><p>Ubuntu 是一种非常流行的 Linux 系统，打开微软应用商店</p>
+<p></p>
+<p>搜索 ubuntu</p>
+<p></p>
+<p>选一个版本安装（我用的是 18.04 LTS）</p>
+<h3 id="3-运行-Ubuntu-子系统"><a href="#3-运行-Ubuntu-子系统" class="headerlink" title="3) 运行 Ubuntu 子系统"></a>3) 运行 Ubuntu 子系统</h3><p>安装完毕后，打开命令提示符，输入 wsl，即可进入 Ubuntu 子系统</p>
+<p></p>
+<p>这里就可以运行各种 Linux 下的 App 了，当然我们主要用的是命令行下的 App，图形界面的 App 不行</p>
+<h2 id="2-终端工具"><a href="#2-终端工具" class="headerlink" title="2. 终端工具"></a>2. 终端工具</h2><p>命令提示符这个工具虽然能用，但是界面比较 low，这里给大家介绍一款终端工具：Fluent Terminal，也是在微软应用商店搜索</p>
+<p></p>
+<p>运行界面如下</p>
+<p></p>
+<p>好处是同时支持三种终端</p>
+<ul>
+<li>CMD（命令提示符）</li>
+<li>PowerShell（Windows 下另一个终端工具）</li>
+<li>WSL</li>
+</ul>
+<h2 id="3-截图工具"><a href="#3-截图工具" class="headerlink" title="3. 截图工具"></a>3. 截图工具</h2><p>做笔记的神器：Snipaste，也是在微软应用商店搜索</p>
+<p></p>
+<h2 id="4-笔记工具"><a href="#4-笔记工具" class="headerlink" title="4. 笔记工具"></a>4. 笔记工具</h2><p>笔记神器：Typora，1.0 版本后收费 89 元（可以找找低版本的），当然你也可以选择其它笔记工具</p>
+<p></p>
+<h2 id="5-思维导图工具"><a href="#5-思维导图工具" class="headerlink" title="5. 思维导图工具"></a>5. 思维导图工具</h2><p>推荐使用 Xmind 工具，免费的功能就够用</p>
+
   </div>
   
   
@@ -2649,7 +3066,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
     <div class='new-meta-box'>
       
         
-          <div class="new-meta-item date" itemprop="dateModified" datetime="2024-04-10T20:06:48+08:00">
+          <div class="new-meta-item date" itemprop="dateModified" datetime="2024-04-10T21:45:40+08:00">
   <a class='notlink'>
     <i class="fa-solid fa-edit fa-fw" aria-hidden="true"></i>
     <p>更新于：Apr 10, 2024</p>
@@ -2745,7 +3162,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 
 
   <div class='content'>
-      
+      <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#1-JVM"><span class="toc-text">1. JVM</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2-JRE"><span class="toc-text">2. JRE</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#3-JDK"><span class="toc-text">3. JDK</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#1-%E4%B8%8B%E8%BD%BD%E5%92%8C%E5%AE%89%E8%A3%85"><span class="toc-text">1. 下载和安装</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2-%E9%85%8D%E7%BD%AE-Path"><span class="toc-text">2. 配置 Path</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#3-%E9%85%8D%E7%BD%AE-JAVA-HOME%EF%BC%88%E9%80%89%E8%AE%B2%EF%BC%89"><span class="toc-text">3. 配置 JAVA_HOME（选讲）</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%BC%98%E5%8C%96"><span class="toc-text">优化</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#1-%E7%AC%AC%E4%B8%80%E8%A1%8C%E4%BB%A3%E7%A0%81"><span class="toc-text">1. 第一行代码</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#1-jshell"><span class="toc-text">1) jshell</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-%E4%BB%A3%E7%A0%81%E8%A7%A3%E8%AF%BB"><span class="toc-text">2) 代码解读</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E6%80%BB%E7%BB%93"><span class="toc-text">总结</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3-%E4%B8%BA%E4%BD%95%E8%A6%81%E5%88%86%E6%88%90%E5%AF%B9%E8%B1%A1%E4%B8%8E%E6%96%B9%E6%B3%95"><span class="toc-text">3) 为何要分成对象与方法</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2-%E7%AC%AC%E4%B8%80%E4%BB%BD%E6%BA%90%E7%A0%81"><span class="toc-text">2. 第一份源码</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#1-%E6%BA%90%E7%A0%81%E7%BB%93%E6%9E%84"><span class="toc-text">1) 源码结构</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-%E7%BC%96%E5%86%99-java-%E6%BA%90%E4%BB%A3%E7%A0%81"><span class="toc-text">2) 编写 java 源代码</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3-%E7%BC%96%E8%AF%91-java-%E6%BA%90%E4%BB%A3%E7%A0%81"><span class="toc-text">3) 编译 java 源代码</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#4-%E8%BF%90%E8%A1%8C-class-%E5%AD%97%E8%8A%82%E7%A0%81"><span class="toc-text">4) 运行 class 字节码</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#3-%E5%B8%B8%E8%A7%81%E9%97%AE%E9%A2%98"><span class="toc-text">3. 常见问题</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%B8%AD%E6%96%87%E8%BE%93%E5%87%BA%E4%B9%B1%E7%A0%81"><span class="toc-text">中文输出乱码</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E8%A7%A3%E5%86%B3%E6%96%B9%E6%B3%951"><span class="toc-text">解决方法1</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E8%A7%A3%E5%86%B3%E6%96%B9%E6%B3%952"><span class="toc-text">解决方法2</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%BC%96%E8%AF%91%E9%94%99%E8%AF%AF"><span class="toc-text">编译错误</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#4-%E6%B3%A8%E9%87%8A"><span class="toc-text">4. 注释</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%8D%95%E8%A1%8C%E6%B3%A8%E9%87%8A"><span class="toc-text">单行注释</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%A4%9A%E8%A1%8C%E6%B3%A8%E9%87%8A"><span class="toc-text">多行注释</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%96%87%E6%A1%A3%E6%B3%A8%E9%87%8A"><span class="toc-text">文档注释</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#5-%E6%80%9D%E8%80%83-%E4%B8%BA%E4%BD%95%E9%9C%80%E8%A6%81%E5%AD%97%E8%8A%82%E7%A0%81"><span class="toc-text">5. 思考-为何需要字节码</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#C-%E7%9A%84%E7%BF%BB%E8%AF%91%E8%BF%87%E7%A8%8B"><span class="toc-text">C++ 的翻译过程</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Java-%E7%9A%84%E7%BF%BB%E8%AF%91%E8%BF%87%E7%A8%8B"><span class="toc-text">Java 的翻译过程</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%B0%8F%E7%BB%93"><span class="toc-text">小结</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#1-%E5%B8%B8%E8%A7%81-IDE-%E5%B7%A5%E5%85%B7"><span class="toc-text">1. 常见 IDE 工具</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#Eclipse"><span class="toc-text">Eclipse</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Vscode"><span class="toc-text">Vscode</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#IntelliJ-IDEA"><span class="toc-text">IntelliJ IDEA</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2-IntelliJ-IDEA-%E7%9A%84%E9%85%8D%E7%BD%AE%E5%8F%8A%E4%BD%BF%E7%94%A8"><span class="toc-text">2. IntelliJ IDEA 的配置及使用</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#1-%E5%AE%89%E8%A3%85%E5%90%AF%E5%8A%A8"><span class="toc-text">1) 安装启动</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-%E5%88%9B%E5%BB%BA%E9%A1%B9%E7%9B%AE"><span class="toc-text">2) 创建项目</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3-%E8%BF%90%E8%A1%8C%E4%BB%A3%E7%A0%81"><span class="toc-text">3) 运行代码</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#1-Ubuntu-%E5%AD%90%E7%B3%BB%E7%BB%9F"><span class="toc-text">1. Ubuntu 子系统</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#1-%E5%AE%89%E8%A3%85-wsl-%E5%B7%A5%E5%85%B7"><span class="toc-text">1) 安装 wsl 工具</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-%E5%AE%89%E8%A3%85-Ubuntu-%E5%AD%90%E7%B3%BB%E7%BB%9F"><span class="toc-text">2) 安装 Ubuntu 子系统</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3-%E8%BF%90%E8%A1%8C-Ubuntu-%E5%AD%90%E7%B3%BB%E7%BB%9F"><span class="toc-text">3) 运行 Ubuntu 子系统</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2-%E7%BB%88%E7%AB%AF%E5%B7%A5%E5%85%B7"><span class="toc-text">2. 终端工具</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#3-%E6%88%AA%E5%9B%BE%E5%B7%A5%E5%85%B7"><span class="toc-text">3. 截图工具</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#4-%E7%AC%94%E8%AE%B0%E5%B7%A5%E5%85%B7"><span class="toc-text">4. 笔记工具</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#5-%E6%80%9D%E7%BB%B4%E5%AF%BC%E5%9B%BE%E5%B7%A5%E5%85%B7"><span class="toc-text">5. 思维导图工具</span></a></li></ol>
   </div>
 </section>
 
@@ -3354,7 +3771,7 @@ window.matchMedia('(prefers-color-scheme: light)').addListener(darkModelListener
 </script>
 
 
-  <script type="application/ld+json">[{"@context":"https://schema.org.cn","@type":"Organization","name":"YanYi Blog","url":"http://example.com/","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1660614606622/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},{"@context":"https://schema.org.cn","@type":"Person","name":"YanYi","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1660614606622/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"http://example.com/","sameAs":["https://github.com/volantis-x"],"description":"妍一的个人博客"},{"@context":"https://schema.org.cn","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"item":{"@id":"http://example.com/","name":"YanYi Blog"}},{"@type":"ListItem","position":3,"item":{"@id":"http://example.com/2024/04/10/我的第一篇文章/","name":"我的第一篇文章"}}]},{"@context":"https://schema.org.cn","@type":"WebSite","name":"YanYi Blog","url":"http://example.com/","keywords":null,"description":"妍一的个人博客","author":{"@type":"Person","name":"YanYi","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1660614606622/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"http://example.com/","description":"妍一的个人博客"},"publisher":{"@type":"Organization","name":"YanYi Blog","url":"http://example.com/","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1660614606622/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},"potentialAction":{"@type":"SearchAction","name":"Site Search","target":{"@type":"EntryPoint","urlTemplate":"http://example.com?s={search_term_string}"},"query-input":"required name=search_term_string"}},{"@context":"https://schema.org.cn","@type":"BlogPosting","headline":"我的第一篇文章","description":"妍一的个人博客","inLanguage":"en","mainEntityOfPage":{"@type":"WebPage","@id":"http://example.com/2024/04/10/%E6%88%91%E7%9A%84%E7%AC%AC%E4%B8%80%E7%AF%87%E6%96%87%E7%AB%A0/"},"author":{"@type":"Person","name":"YanYi","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1660614606622/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"http://example.com/"},"publisher":{"@type":"Organization","name":"YanYi Blog","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1660614606622/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},"url":"http://example.com/2024/04/10/%E6%88%91%E7%9A%84%E7%AC%AC%E4%B8%80%E7%AF%87%E6%96%87%E7%AB%A0/","wordCount":0,"datePublished":"2024-04-10T12:06:48.000Z","dateModified":"2024-04-10T12:06:48.649Z","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1660614606622/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}}]</script>
+  <script type="application/ld+json">[{"@context":"https://schema.org.cn","@type":"Organization","name":"YanYi Blog","url":"http://example.com/","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1660614606622/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},{"@context":"https://schema.org.cn","@type":"Person","name":"YanYi","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1660614606622/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"http://example.com/","sameAs":["https://github.com/volantis-x"],"description":"妍一的个人博客"},{"@context":"https://schema.org.cn","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"item":{"@id":"http://example.com/","name":"YanYi Blog"}},{"@type":"ListItem","position":3,"item":{"@id":"http://example.com/2024/04/10/我的第一篇文章/","name":"我的第一篇文章"}}]},{"@context":"https://schema.org.cn","@type":"WebSite","name":"YanYi Blog","url":"http://example.com/","keywords":null,"description":"妍一的个人博客","author":{"@type":"Person","name":"YanYi","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1660614606622/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"http://example.com/","description":"妍一的个人博客"},"publisher":{"@type":"Organization","name":"YanYi Blog","url":"http://example.com/","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1660614606622/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},"potentialAction":{"@type":"SearchAction","name":"Site Search","target":{"@type":"EntryPoint","urlTemplate":"http://example.com?s={search_term_string}"},"query-input":"required name=search_term_string"}},{"@context":"https://schema.org.cn","@type":"BlogPosting","headline":"我的第一篇文章","description":"妍一的个人博客","inLanguage":"en","mainEntityOfPage":{"@type":"WebPage","@id":"http://example.com/2024/04/10/%E6%88%91%E7%9A%84%E7%AC%AC%E4%B8%80%E7%AF%87%E6%96%87%E7%AB%A0/"},"author":{"@type":"Person","name":"YanYi","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1660614606622/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"http://example.com/"},"publisher":{"@type":"Organization","name":"YanYi Blog","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1660614606622/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},"url":"http://example.com/2024/04/10/%E6%88%91%E7%9A%84%E7%AC%AC%E4%B8%80%E7%AF%87%E6%96%87%E7%AB%A0/","wordCount":0,"datePublished":"2024-04-10T12:06:48.000Z","dateModified":"2024-04-10T13:45:40.782Z","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1660614606622/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}}]</script>
 
 
 
