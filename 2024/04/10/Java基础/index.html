@@ -34,19 +34,19 @@
 
   <!-- feed -->
   <!-- 页面元数据 -->
-  <title>我的第一篇文章 - YanYi Blog</title>
+  <title>Java基础 - YanYi Blog</title>
   <meta name="keywords" content="null">
   <meta desc name="description" content="妍一的个人博客 - YanYi - YanYi Blog">
   
 <meta property="og:type" content="article">
-<meta property="og:title" content="我的第一篇文章">
+<meta property="og:title" content="Java基础">
 <meta property="og:url" content="http://example.com/2024/04/10/Java%E5%9F%BA%E7%A1%80/index.html">
 <meta property="og:site_name" content="YanYi Blog">
 <meta property="og:description" content="一. Java 简介Java 是第一大编程语言和开发平台。它有助于企业降低成本、缩短开发周期、推动创新以及改善应用服务。如今，Java 仍是企业和开发人员的首选开发平台，全球有数百万开发人员运行超过 51 亿台 Java 虚拟机。 1. JVM 它是 Java Virtual Machine 也就是 Java 虚拟机的缩写，它的职责是解释执行Java代码。我们写好的 Java 代码，并不能被直接运">
 <meta property="og:locale" content="en_US">
 <meta property="og:image" content="https://unpkg.com/volantis-static@0.0.1660614606622/media/org.volantis/blog/favicon/android-chrome-192x192.png">
 <meta property="article:published_time" content="2024-04-10T12:06:48.000Z">
-<meta property="article:modified_time" content="2024-04-10T13:45:40.782Z">
+<meta property="article:modified_time" content="2024-04-10T14:34:15.043Z">
 <meta property="article:author" content="YanYi">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:image" content="https://unpkg.com/volantis-static@0.0.1660614606622/media/org.volantis/blog/favicon/android-chrome-192x192.png">
@@ -2159,7 +2159,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
     root: '/',
     debug: "env",
     default: {"avatar":"https://unpkg.com/volantis-static@0.0.1660614606622/media/placeholder/avatar/round/3442075.svg","link":"https://unpkg.com/volantis-static@0.0.1660614606622/media/placeholder/link/8f277b4ee0ecd.svg","cover":"https://unpkg.com/volantis-static@0.0.1660614606622/media/placeholder/cover/76b86c0226ffd.svg","image":"https://unpkg.com/volantis-static@0.0.1660614606622/media/placeholder/image/2659360.svg"},
-    lastupdate: new Date(1712759502405),
+    lastupdate: new Date(1712759685400),
     cdn: {
       izitoast_css: 'https://cdn.bootcdn.net/ajax/libs/izitoast/1.4.0/css/iziToast.min.css',
       izitoast_js: 'https://cdn.bootcdn.net/ajax/libs/izitoast/1.4.0/js/iziToast.min.js',
@@ -2565,7 +2565,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
     
     
       <h1 class="title" itemprop="name headline">
-        我的第一篇文章
+        Java基础
       </h1>
       <div class='new-meta-box'>
         
@@ -2701,9 +2701,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 <h3 id="优化"><a href="#优化" class="headerlink" title="优化"></a>优化</h3><p>配完之后，发现 PATH 环境变量中的 D:\jdk-17.0.3.1\bin 与 JAVA_HOME 中的 D:\jdk-17.0.3.1 有一部分重复了，这样的问题是如果将来切换 jdk 版本，如果改了一处，忘记改另一处，就会造成不一致。</p>
 <p>可以把 PATH 的取值修改为 %JAVA_HOME%\bin，其中 %JAVA_HOME% 代表引用 JAVA_HOME 环境变量的值，这样以后改动时，只需要改 JAVA_HOME 这一处就可以了</p>
 <h1 id="三-入门案例"><a href="#三-入门案例" class="headerlink" title="三. 入门案例"></a>三. 入门案例</h1><p>这节课我们来学习 Java 的第一个入门程序，Hello world，目标是<strong>命令</strong> jvm，在程序窗口输出一行问候语。</p>
-<h2 id="1-第一行代码"><a href="#1-第一行代码" class="headerlink" title="1. 第一行代码"></a>1. 第一行代码</h2><h3 id="1-jshell"><a href="#1-jshell" class="headerlink" title="1) jshell"></a>1) jshell</h3><p>首先用到的是一个名为 jshell 的开发工具，打开命令提示符 cmd，输入 jshell<br>    PS D:&gt; jshell<br>    |  欢迎使用 JShell – 版本 17.0.2<br>    |  要大致了解该版本, 请键入: &#x2F;help intro</p>
-<pre><code>jshell&gt;
-</code></pre>
+<h2 id="1-第一行代码"><a href="#1-第一行代码" class="headerlink" title="1. 第一行代码"></a>1. 第一行代码</h2><h3 id="1-jshell"><a href="#1-jshell" class="headerlink" title="1) jshell"></a>1) jshell</h3><p>首先用到的是一个名为 jshell 的开发工具，打开命令提示符 cmd，输入 jshell<br>    PS D:&gt; jshell<br>    |  欢迎使用 JShell – 版本 17.0.2<br>    |  要大致了解该版本, 请键入: &#x2F;help intro<br>    jshell&gt;</p>
 <p>可以看到【jshell&gt;】后的光标在不断闪烁，表示可以继续在【jshell&gt;】后键入命令或代码</p>
 <p>常见命令</p>
 <ul>
@@ -2785,12 +2783,8 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 <p>这种划分更符合现实世界中对事物的认知，例如，你叫住【皮卡丘】，皮卡丘就是待操作的对象，这时候他还不知道要做什么。好，你命令他【趴下】，这个趴下就是方法，是皮卡丘要执行的动作，你再命令他【吃饭】，这个吃饭是另一个方法。可以看到，现实世界都可以这么划分，那么把计算机中的虚拟物体抽象成对象和方法，当然也是顺理成章啦，这符合人类对事物的认知。</p>
 <p>因此，不要怕麻烦，以后在 java 世界编写的代码，绝大多数都是这种对象+方法的形式，这称之为<strong>面向对象编程</strong>，今天我们还不会正式讲解面向对象编程，但同学们要建立起对象、方法的概念</p>
 <h2 id="2-第一份源码"><a href="#2-第一份源码" class="headerlink" title="2. 第一份源码"></a>2. 第一份源码</h2><p>jshell 执行过的代码，在 jshell 退出后下次再想用，就不方便调出来了，正式的代码都会保存在类文件中，类文件的后缀是 .java，也称为 java 源代码</p>
-<h3 id="1-源码结构"><a href="#1-源码结构" class="headerlink" title="1) 源码结构"></a>1) 源码结构</h3><p>源码结构如下，一份源码中可以包含多个类，每个类中又可以包含多个方法，方法内再包含语句代码<br>    class A {<br>        方法1() {<br>            &#x2F;&#x2F; 语句代码<br>        }</p>
-<pre><code>    方法2() &#123;
-        // 语句代码
-    &#125;
-
-    入口方法() &#123;
+<h3 id="1-源码结构"><a href="#1-源码结构" class="headerlink" title="1) 源码结构"></a>1) 源码结构</h3><p>源码结构如下，一份源码中可以包含多个类，每个类中又可以包含多个方法，方法内再包含语句代码<br>    class A {<br>        方法1() {<br>            &#x2F;&#x2F; 语句代码<br>        }<br>        方法2() {<br>            &#x2F;&#x2F; 语句代码<br>        }</p>
+<pre><code>    入口方法() &#123;
         // 语句代码
     &#125;
 &#125;
@@ -2800,9 +2794,7 @@ class B &#123;
 &#125;
 </code></pre>
 <p>这里我们关注其中一个特殊方法：入口方法。</p>
-<p>入口方法的格式是固定的：<br>    public static void main(String[] args) {</p>
-<pre><code>&#125;
-</code></pre>
+<p>入口方法的格式是固定的：<br>    public static void main(String[] args) {<br>    }</p>
 <p>以后我们就称它为 main 方法</p>
 <ul>
 <li>main 并不从属于任何对象（由 static 修饰）</li>
@@ -3066,7 +3058,7 @@ class B &#123;
     <div class='new-meta-box'>
       
         
-          <div class="new-meta-item date" itemprop="dateModified" datetime="2024-04-10T21:45:40+08:00">
+          <div class="new-meta-item date" itemprop="dateModified" datetime="2024-04-10T22:34:15+08:00">
   <a class='notlink'>
     <i class="fa-solid fa-edit fa-fw" aria-hidden="true"></i>
     <p>更新于：Apr 10, 2024</p>
@@ -3771,7 +3763,7 @@ window.matchMedia('(prefers-color-scheme: light)').addListener(darkModelListener
 </script>
 
 
-  <script type="application/ld+json">[{"@context":"https://schema.org.cn","@type":"Organization","name":"YanYi Blog","url":"http://example.com/","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1660614606622/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},{"@context":"https://schema.org.cn","@type":"Person","name":"YanYi","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1660614606622/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"http://example.com/","sameAs":["https://github.com/volantis-x"],"description":"妍一的个人博客"},{"@context":"https://schema.org.cn","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"item":{"@id":"http://example.com/","name":"YanYi Blog"}},{"@type":"ListItem","position":3,"item":{"@id":"http://example.com/2024/04/10/Java基础/","name":"我的第一篇文章"}}]},{"@context":"https://schema.org.cn","@type":"WebSite","name":"YanYi Blog","url":"http://example.com/","keywords":null,"description":"妍一的个人博客","author":{"@type":"Person","name":"YanYi","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1660614606622/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"http://example.com/","description":"妍一的个人博客"},"publisher":{"@type":"Organization","name":"YanYi Blog","url":"http://example.com/","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1660614606622/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},"potentialAction":{"@type":"SearchAction","name":"Site Search","target":{"@type":"EntryPoint","urlTemplate":"http://example.com?s={search_term_string}"},"query-input":"required name=search_term_string"}},{"@context":"https://schema.org.cn","@type":"BlogPosting","headline":"我的第一篇文章","description":"妍一的个人博客","inLanguage":"en","mainEntityOfPage":{"@type":"WebPage","@id":"http://example.com/2024/04/10/Java%E5%9F%BA%E7%A1%80/"},"author":{"@type":"Person","name":"YanYi","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1660614606622/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"http://example.com/"},"publisher":{"@type":"Organization","name":"YanYi Blog","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1660614606622/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},"url":"http://example.com/2024/04/10/Java%E5%9F%BA%E7%A1%80/","wordCount":0,"datePublished":"2024-04-10T12:06:48.000Z","dateModified":"2024-04-10T13:45:40.782Z","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1660614606622/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}}]</script>
+  <script type="application/ld+json">[{"@context":"https://schema.org.cn","@type":"Organization","name":"YanYi Blog","url":"http://example.com/","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1660614606622/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},{"@context":"https://schema.org.cn","@type":"Person","name":"YanYi","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1660614606622/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"http://example.com/","sameAs":["https://github.com/volantis-x"],"description":"妍一的个人博客"},{"@context":"https://schema.org.cn","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"item":{"@id":"http://example.com/","name":"YanYi Blog"}},{"@type":"ListItem","position":3,"item":{"@id":"http://example.com/2024/04/10/Java基础/","name":"Java基础"}}]},{"@context":"https://schema.org.cn","@type":"WebSite","name":"YanYi Blog","url":"http://example.com/","keywords":null,"description":"妍一的个人博客","author":{"@type":"Person","name":"YanYi","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1660614606622/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"http://example.com/","description":"妍一的个人博客"},"publisher":{"@type":"Organization","name":"YanYi Blog","url":"http://example.com/","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1660614606622/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},"potentialAction":{"@type":"SearchAction","name":"Site Search","target":{"@type":"EntryPoint","urlTemplate":"http://example.com?s={search_term_string}"},"query-input":"required name=search_term_string"}},{"@context":"https://schema.org.cn","@type":"BlogPosting","headline":"Java基础","description":"妍一的个人博客","inLanguage":"en","mainEntityOfPage":{"@type":"WebPage","@id":"http://example.com/2024/04/10/Java%E5%9F%BA%E7%A1%80/"},"author":{"@type":"Person","name":"YanYi","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1660614606622/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"http://example.com/"},"publisher":{"@type":"Organization","name":"YanYi Blog","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1660614606622/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},"url":"http://example.com/2024/04/10/Java%E5%9F%BA%E7%A1%80/","wordCount":0,"datePublished":"2024-04-10T12:06:48.000Z","dateModified":"2024-04-10T14:34:15.043Z","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1660614606622/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}}]</script>
 
 
 
