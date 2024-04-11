@@ -6,7 +6,7 @@
   <meta charset="utf-8">
   <!-- SEO相关 -->
   
-  <link rel="canonical" href="http://example.com/2024/04/10/java开发命令行程序/"/>
+  <link rel="canonical" href="https://yanyi1991.github.io/2024/04/10/java开发命令行程序/"/>
   <!-- 渲染优化 -->
     <meta http-equiv='x-dns-prefetch-control' content='on' />
       <link rel='dns-prefetch' href='https://unpkg.com'>
@@ -35,12 +35,12 @@
   <!-- feed -->
   <!-- 页面元数据 -->
   <title>Java开发命令行程序 - YanYi Blog</title>
-  <meta name="keywords" content="null">
+  <meta name="keywords" content="个人博客">
   <meta desc name="description" content="妍一的个人博客 - YanYi - YanYi Blog">
   
 <meta property="og:type" content="article">
 <meta property="og:title" content="Java开发命令行程序">
-<meta property="og:url" content="http://example.com/2024/04/10/Java%E5%BC%80%E5%8F%91%E5%91%BD%E4%BB%A4%E8%A1%8C%E7%A8%8B%E5%BA%8F/index.html">
+<meta property="og:url" content="https://yanyi1991.github.io/2024/04/10/Java%E5%BC%80%E5%8F%91%E5%91%BD%E4%BB%A4%E8%A1%8C%E7%A8%8B%E5%BA%8F/index.html">
 <meta property="og:site_name" content="YanYi Blog">
 <meta property="og:description" content="一. 输入输出 输入的作用，就是由使用者告诉程序要操作的数据 例如，我要通过饿了么订餐，你得告诉程序你要吃什么，送货地址是什么吧   输出的作用，就是由程序向使用者展现执行的结果 还是订餐的例子，程序向你展示骑手接单没有，送到哪里了   将来输入输出来源会有多种，比如 app，网页，终端程序等等  1. System.out之前已经介绍过【标准输出】：System.out 打开 jshell 用一">
 <meta property="og:locale" content="en_US">
@@ -48,6 +48,7 @@
 <meta property="article:published_time" content="2024-04-10T14:42:09.000Z">
 <meta property="article:modified_time" content="2024-04-10T14:42:43.242Z">
 <meta property="article:author" content="YanYi">
+<meta property="article:tag" content="个人博客">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:image" content="https://unpkg.com/volantis-static@0.0.1660614606622/media/org.volantis/blog/favicon/android-chrome-192x192.png">
   <style>
@@ -59,21 +60,21 @@
   --color-site-body: #f4f4f4;
   --color-site-bg: #f4f4f4;
   --color-site-inner: #fff;
-  --color-site-footer: #666;
+  --color-site-footer: #fff;
   --color-card: #fff;
   --color-text: #444;
   --color-block: #f6f6f6;
-  --color-inlinecode: #c74f00;
-  --color-codeblock: #fff7ea;
-  --color-h1: #3a3a3a;
-  --color-h2: #3a3a3a;
-  --color-h3: #333;
+  --color-inlinecode: #d56d28;
+  --color-codeblock: #f6f6f6;
+  --color-h1: #444;
+  --color-h2: #444;
+  --color-h3: #444;
   --color-h4: #444;
-  --color-h5: #555;
-  --color-h6: #666;
+  --color-h5: #444;
+  --color-h6: #444;
   --color-p: #444;
   --color-list: #666;
-  --color-list-hl: #30ad91;
+  --color-list-hl: #36ac91;
   --color-meta: #888;
   --color-read-bkg: #e0d8c8;
   --color-read-post: #f8f1e2;
@@ -95,7 +96,7 @@
   background: transparent;
 }
 *::-webkit-scrollbar-thumb {
-  background: #3dd9b6;
+  background: #44d7b6;
   cursor: pointer;
   border-radius: 2px;
   -webkit-border-radius: 2px;
@@ -118,7 +119,7 @@ html >::-webkit-scrollbar-track-piece {
   background: transparent;
 }
 html >::-webkit-scrollbar-thumb {
-  background: #3dd9b6;
+  background: #44d7b6;
   cursor: pointer;
   border-radius: 2px;
   -webkit-border-radius: 2px;
@@ -147,7 +148,7 @@ body.modal-active {
   }
 }
 a {
-  color: #2092ec;
+  color: #2196f3;
   cursor: pointer;
   text-decoration: none;
   transition: all 0.28s ease;
@@ -722,37 +723,37 @@ button {
   }
   :root:not([color-scheme]) {
     --color-site-body: #121212;
-    --color-read-bkg: #1f1f1f;
-    --color-read-post: #262626;
-    --color-site-bg: #1f1f1f;
-    --color-site-inner: rgba(238,238,238,0.871);
-    --color-site-footer: rgba(170,170,170,0.871);
-    --color-card: #262626;
-    --color-text: rgba(238,238,238,0.871);
-    --color-block: #434343;
-    --color-codeblock: #1f1f1f;
+    --color-read-bkg: #222;
+    --color-read-post: #444;
+    --color-site-bg: #222;
+    --color-site-inner: #eee;
+    --color-site-footer: #aaa;
+    --color-card: #444;
+    --color-text: #eee;
+    --color-block: #3a3a3a;
+    --color-codeblock: #343a3c;
     --color-inlinecode: #d56d28;
-    --color-h1: rgba(255,255,255,0.871);
-    --color-h2: rgba(255,255,255,0.871);
-    --color-h3: rgba(255,255,255,0.6);
-    --color-h4: rgba(255,255,255,0.6);
-    --color-h5: rgba(255,255,255,0.6);
-    --color-h6: rgba(255,255,255,0.6);
-    --color-p: rgba(217,217,217,0.871);
-    --color-list: rgba(217,217,217,0.871);
-    --color-list-hl: #63e0c4;
-    --color-meta: rgba(191,191,191,0.871);
-    --color-link: rgba(191,191,191,0.871);
+    --color-h1: #eee;
+    --color-h2: #eee;
+    --color-h3: #ddd;
+    --color-h4: #ddd;
+    --color-h5: #ddd;
+    --color-h6: #ddd;
+    --color-p: #bbb;
+    --color-list: #aaa;
+    --color-list-hl: #69dfc4;
+    --color-meta: #888;
+    --color-link: #888;
     --color-copyright-bkg: #21252b;
   }
   :root:not([color-scheme]) img {
     filter: brightness(70%) !important;
   }
   :root:not([color-scheme]) .blur {
-    background: rgba(31,31,31,0.9) !important;
+    background: rgba(34,34,34,0.9) !important;
   }
   :root:not([color-scheme]) .white-box.blur {
-    background: rgba(38,38,38,0.9) !important;
+    background: rgba(68,68,68,0.9) !important;
   }
   :root:not([color-scheme]) .nav-main .u-search-input {
     background: var(--color-card) !important;
@@ -794,37 +795,37 @@ button {
 }
 [color-scheme='dark'] {
   --color-site-body: #121212;
-  --color-read-bkg: #1f1f1f;
-  --color-read-post: #262626;
-  --color-site-bg: #1f1f1f;
-  --color-site-inner: rgba(238,238,238,0.871);
-  --color-site-footer: rgba(170,170,170,0.871);
-  --color-card: #262626;
-  --color-text: rgba(238,238,238,0.871);
-  --color-block: #434343;
-  --color-codeblock: #1f1f1f;
+  --color-read-bkg: #222;
+  --color-read-post: #444;
+  --color-site-bg: #222;
+  --color-site-inner: #eee;
+  --color-site-footer: #aaa;
+  --color-card: #444;
+  --color-text: #eee;
+  --color-block: #3a3a3a;
+  --color-codeblock: #343a3c;
   --color-inlinecode: #d56d28;
-  --color-h1: rgba(255,255,255,0.871);
-  --color-h2: rgba(255,255,255,0.871);
-  --color-h3: rgba(255,255,255,0.6);
-  --color-h4: rgba(255,255,255,0.6);
-  --color-h5: rgba(255,255,255,0.6);
-  --color-h6: rgba(255,255,255,0.6);
-  --color-p: rgba(217,217,217,0.871);
-  --color-list: rgba(217,217,217,0.871);
-  --color-list-hl: #63e0c4;
-  --color-meta: rgba(191,191,191,0.871);
-  --color-link: rgba(191,191,191,0.871);
+  --color-h1: #eee;
+  --color-h2: #eee;
+  --color-h3: #ddd;
+  --color-h4: #ddd;
+  --color-h5: #ddd;
+  --color-h6: #ddd;
+  --color-p: #bbb;
+  --color-list: #aaa;
+  --color-list-hl: #69dfc4;
+  --color-meta: #888;
+  --color-link: #888;
   --color-copyright-bkg: #21252b;
 }
 [color-scheme='dark'] img {
   filter: brightness(70%) !important;
 }
 [color-scheme='dark'] .blur {
-  background: rgba(31,31,31,0.9) !important;
+  background: rgba(34,34,34,0.9) !important;
 }
 [color-scheme='dark'] .white-box.blur {
-  background: rgba(38,38,38,0.9) !important;
+  background: rgba(68,68,68,0.9) !important;
 }
 [color-scheme='dark'] .nav-main .u-search-input {
   background: var(--color-card) !important;
@@ -1081,7 +1082,7 @@ button {
   -moz-transition: all 0.28s ease;
   -o-transition: all 0.28s ease;
   -ms-transition: all 0.28s ease;
-  color: #3dd9b6;
+  color: #44d7b6;
 }
 .l_header .switcher >li >a:hover {
   border: none;
@@ -1261,7 +1262,7 @@ ul.m-pc >li>a {
 }
 ul.m-pc >li>a:active,
 ul.m-pc >li>a.active {
-  border-bottom: 2px solid #3dd9b6;
+  border-bottom: 2px solid #44d7b6;
 }
 ul.m-pc li:hover >ul.list-v,
 ul.list-v li:hover >ul.list-v {
@@ -1400,7 +1401,7 @@ ul.list-v >li>a:hover {
 }
 .l_header ul.nav-list-h>li >a:active,
 .l_header ul.nav-list-h>li >a.active {
-  color: #3dd9b6;
+  color: #44d7b6;
 }
 .l_header ul.nav-list-h>li:hover>a {
   color: var(--color-list-hl);
@@ -2159,7 +2160,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
     root: '/',
     debug: "env",
     default: {"avatar":"https://unpkg.com/volantis-static@0.0.1660614606622/media/placeholder/avatar/round/3442075.svg","link":"https://unpkg.com/volantis-static@0.0.1660614606622/media/placeholder/link/8f277b4ee0ecd.svg","cover":"https://unpkg.com/volantis-static@0.0.1660614606622/media/placeholder/cover/76b86c0226ffd.svg","image":"https://unpkg.com/volantis-static@0.0.1660614606622/media/placeholder/image/2659360.svg"},
-    lastupdate: new Date(1712764035650),
+    lastupdate: new Date(1712809150886),
     cdn: {
       izitoast_css: 'https://cdn.bootcdn.net/ajax/libs/izitoast/1.4.0/css/iziToast.min.css',
       izitoast_js: 'https://cdn.bootcdn.net/ajax/libs/izitoast/1.4.0/js/iziToast.min.js',
@@ -2167,7 +2168,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
       fancybox_js: 'https://cdn.bootcdn.net/ajax/libs/fancyapps-ui/5.0.33/fancybox/fancybox.umd.min.js'
     },
     sidebar: {
-      for_page: ["blogger","category","tagcloud","donate"],
+      for_page: ["blogger","category","tagcloud","webinfo","lastupdate"],
       for_post: ["toc"],
       webinfo: {
         lastupd: {
@@ -2175,7 +2176,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
           friendlyShow: true
         },
         runtime: {
-          data: "2020/01/01",
+          data: "2022/12/04",
           unit: "天"
         }
       }
@@ -2216,7 +2217,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
     <!-- Custom Files bodyBegin begin-->
     
     <!-- Custom Files bodyBegin end-->
-    <header itemscope itemtype="https://schema.org.cn/WPHeader" id="l_header" class="l_header auto shadow floatable blur show" style='opacity: 0' >
+    <header itemscope itemtype="https://schema.org.cn/WPHeader" id="l_header" class="l_header auto shadow floatable blur " style='opacity: 0' >
   <div class='container'>
   <div id='wrapper'>
     <div class='nav-sub'>
@@ -2341,23 +2342,6 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
                     active-action="action-about"
                   >
                   <i class='fa-solid fa-info-circle fa-fw'></i>关于
-                </a>
-                
-              </li>
-            
-          
-          
-            
-            
-              <li>
-                <a class="menuitem flat-box faa-parent animated-hover"
-                href="/www.baidu.com/" title="更多"
-                  
-                  
-                  
-                    active-action="action-wwwbaiducom"
-                  >
-                  <i class='fa-duotone fa-t-rex fa-fw'></i>更多
                 </a>
                 
               </li>
@@ -2498,23 +2482,6 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
               
             
               <li>
-                <a class="menuitem flat-box faa-parent animated-hover"
-                href="/www.baidu.com/" title="更多"
-                  
-                  
-                  
-                    active-action="action-wwwbaiducom"
-                  >
-                  <i class='fa-duotone fa-t-rex fa-fw'></i>更多
-                </a>
-                
-              </li>
-            
-          
-            
-              
-            
-              <li>
                 <a class="menuitem flat-box header toggle-mode-btn">
                   <i class='fa-solid fa-sun fa-fw'></i>日间/夜间模式
                 </a>
@@ -2537,6 +2504,78 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
     <div id="l_body">
       <div id="l_cover">
   
+    
+      <div class="cover-wrapper post search" id='half'>
+        
+  <div class='cover-bg lazyload placeholder' data-bg="https://api.dujin.org/bing/1920.php"></div>
+
+<div class='cover-body'>
+  <div class='top'>
+    
+    
+      <p class="title">#妍一的个人博客</p>
+    
+    
+      <p class="subtitle">这世间本就是各人下雪，各有各的隐晦皎洁。</p>
+    
+  </div>
+  <div class='bottom'>
+    
+      <div class="m_search">
+        <form name="searchform" class="form u-search-form">
+          <input type="text" class="input u-search-input" placeholder="搜一下" />
+          <i class="icon fa-solid fa-search fa-fw"></i>
+        </form>
+      </div>
+    
+    <div class='menu navigation'>
+      <div class='list-h'>
+        
+          
+            <a href="/"
+              
+              
+              active-action="action-home">
+              <i class='fa-solid fa-rss fa-fw'></i><p>首页</p>
+            </a>
+          
+            <a href="/categories/"
+              
+              
+              active-action="action-categories">
+              <i class='fa-solid fa-folder-open fa-fw'></i><p>分类</p>
+            </a>
+          
+            <a href="/tags/"
+              
+              
+              active-action="action-tags">
+              <i class='fa-solid fa-tags fa-fw'></i><p>标签</p>
+            </a>
+          
+            <a href="/archives/"
+              
+              
+              active-action="action-archives">
+              <i class='fa-solid fa-archive fa-fw'></i><p>时间轴</p>
+            </a>
+          
+            <a href="/friends/"
+              
+              
+              active-action="action-friends">
+              <i class='fa-solid fa-link fa-fw'></i><p>友链</p>
+            </a>
+          
+        
+      </div>
+    </div>
+  </div>
+</div>
+
+      </div>
+    
+  
 </div>
 
       <div id="safearea">
@@ -2544,7 +2583,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
           
 <div id="l_main" class=''>
   <article itemscope itemtype="https://schema.org.cn/Article" class="article post white-box reveal md shadow floatable blur article-type-post" id="post" itemscope itemprop="blogPost">
-  <link itemprop="mainEntityOfPage" href="http://example.com/2024/04/10/Java开发命令行程序/">
+  <link itemprop="mainEntityOfPage" href="https://yanyi1991.github.io/2024/04/10/Java开发命令行程序/">
   <span hidden itemprop="publisher" itemscope itemtype="https://schema.org.cn/Organization">
     <meta itemprop="name" content="YanYi Blog">
   </span>
@@ -2573,8 +2612,8 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
             
 <div class='new-meta-item author' itemprop="author" itemscope itemtype="https://schema.org.cn/Person">
   <a itemprop="url" class='author' href="/" rel="nofollow">
-    <img itemprop="image" src="https://unpkg.com/volantis-static@0.0.1660614606622/media/org.volantis/blog/favicon/apple-touch-icon.png" class="lazyload" data-srcset="https://unpkg.com/volantis-static@0.0.1660614606622/media/org.volantis/blog/favicon/apple-touch-icon.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==">
-    <p itemprop="name">妍一</p>
+    " class="lazyload" data-srcset="" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==<img itemprop="image" src="">
+    <p itemprop="name"></p>
   </a>
 </div>
 
@@ -2593,6 +2632,11 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
     <p>发布于：Apr 10, 2024</p>
   </a>
 </div>
+
+          
+        
+          
+            
 
           
         
@@ -3617,19 +3661,6 @@ class Calulator &#123;
       
       <!-- 版权声明组件 -->
       
-        
-          <div class='copyright'>
-            <blockquote>
-              
-                
-                  <p>博客内容遵循 署名-非商业性使用-相同方式共享 4.0 国际 (CC BY-NC-SA 4.0) 协议</p>
-
-                
-              
-            </blockquote>
-          </div>
-        
-      
       <!-- 打赏组件 -->
       
     </div>
@@ -3658,6 +3689,53 @@ class Calulator &#123;
       
         
           
+  <div class="new-meta-item share -mob-share-list">
+  <div class="-mob-share-list share-body">
+    
+      
+        <a class="-mob-share-qq" title="" rel="external nofollow noopener noreferrer noopener"
+          
+          target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=https://yanyi1991.github.io/2024/04/10/Java%E5%BC%80%E5%8F%91%E5%91%BD%E4%BB%A4%E8%A1%8C%E7%A8%8B%E5%BA%8F/&title=Java开发命令行程序 - YanYi Blog&summary="
+          
+          >
+          
+            <img src="https://unpkg.com/volantis-static@0.0.1660614606622/media/org.volantis/logo/128/qq.png" class="lazyload" data-srcset="https://unpkg.com/volantis-static@0.0.1660614606622/media/org.volantis/logo/128/qq.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==">
+          
+        </a>
+      
+    
+      
+        <a class="-mob-share-qzone" title="" rel="external nofollow noopener noreferrer noopener"
+          
+          target="_blank" href="https://sns.qzone.qq.com/cgi-bin/qzshare/cgi_qzshare_onekey?url=https://yanyi1991.github.io/2024/04/10/Java%E5%BC%80%E5%8F%91%E5%91%BD%E4%BB%A4%E8%A1%8C%E7%A8%8B%E5%BA%8F/&title=Java开发命令行程序 - YanYi Blog&summary="
+          
+          >
+          
+            <img src="https://unpkg.com/volantis-static@0.0.1660614606622/media/org.volantis/logo/128/qzone.png" class="lazyload" data-srcset="https://unpkg.com/volantis-static@0.0.1660614606622/media/org.volantis/logo/128/qzone.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==">
+          
+        </a>
+      
+    
+      
+        <a class="-mob-share-weibo" title="" rel="external nofollow noopener noreferrer noopener"
+          
+          target="_blank" href="http://service.weibo.com/share/share.php?url=https://yanyi1991.github.io/2024/04/10/Java%E5%BC%80%E5%8F%91%E5%91%BD%E4%BB%A4%E8%A1%8C%E7%A8%8B%E5%BA%8F/&title=Java开发命令行程序 - YanYi Blog&summary="
+          
+          >
+          
+            <img src="https://unpkg.com/volantis-static@0.0.1660614606622/media/org.volantis/logo/128/weibo.png" class="lazyload" data-srcset="https://unpkg.com/volantis-static@0.0.1660614606622/media/org.volantis/logo/128/weibo.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==">
+          
+        </a>
+      
+    
+      
+    
+      
+    
+  </div>
+</div>
+
+
 
         
       
@@ -3772,9 +3850,30 @@ class Calulator &#123;
         <div class="social-wrapper" itemprop="about" itemscope itemtype="https://schema.org.cn/Thing">
           
             
-          
+              <a href="/atom.xml"
+                class="social fas fa-rss flat-btn"
+                target="_blank"
+                rel="external nofollow noopener noreferrer" itemprop="url">
+                
+              </a>
             
           
+            
+              <a href="/3321965724@qq.com"
+                class="social fas fa-envelope flat-btn"
+                target="_blank"
+                rel="external nofollow noopener noreferrer" itemprop="url">
+                
+              </a>
+            
+          
+            
+              <a href="https://github.com/yanyi1991/yanyi1991.github.io"
+                class="social fab fa-github flat-btn"
+                target="_blank"
+                rel="external nofollow noopener noreferrer" itemprop="url">
+                
+              </a>
             
           
         </div>
@@ -3793,7 +3892,7 @@ class Calulator &#123;
     
       
         <div class='copyright'>
-        <p><a href="/">Copyright © since 2017 XXX</a></p>
+        <p><a href="/">Copyright © 2017-2024 #版权</a></p>
 
         </div>
       
@@ -4347,7 +4446,7 @@ window.matchMedia('(prefers-color-scheme: light)').addListener(darkModelListener
 </script>
 
 
-  <script type="application/ld+json">[{"@context":"https://schema.org.cn","@type":"Organization","name":"YanYi Blog","url":"http://example.com/","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1660614606622/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},{"@context":"https://schema.org.cn","@type":"Person","name":"YanYi","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1660614606622/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"http://example.com/","sameAs":["https://github.com/volantis-x"],"description":"妍一的个人博客"},{"@context":"https://schema.org.cn","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"item":{"@id":"http://example.com/","name":"YanYi Blog"}},{"@type":"ListItem","position":3,"item":{"@id":"http://example.com/2024/04/10/Java开发命令行程序/","name":"Java开发命令行程序"}}]},{"@context":"https://schema.org.cn","@type":"WebSite","name":"YanYi Blog","url":"http://example.com/","keywords":null,"description":"妍一的个人博客","author":{"@type":"Person","name":"YanYi","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1660614606622/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"http://example.com/","description":"妍一的个人博客"},"publisher":{"@type":"Organization","name":"YanYi Blog","url":"http://example.com/","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1660614606622/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},"potentialAction":{"@type":"SearchAction","name":"Site Search","target":{"@type":"EntryPoint","urlTemplate":"http://example.com?s={search_term_string}"},"query-input":"required name=search_term_string"}},{"@context":"https://schema.org.cn","@type":"BlogPosting","headline":"Java开发命令行程序","description":"妍一的个人博客","inLanguage":"en","mainEntityOfPage":{"@type":"WebPage","@id":"http://example.com/2024/04/10/Java%E5%BC%80%E5%8F%91%E5%91%BD%E4%BB%A4%E8%A1%8C%E7%A8%8B%E5%BA%8F/"},"author":{"@type":"Person","name":"YanYi","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1660614606622/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"http://example.com/"},"publisher":{"@type":"Organization","name":"YanYi Blog","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1660614606622/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},"url":"http://example.com/2024/04/10/Java%E5%BC%80%E5%8F%91%E5%91%BD%E4%BB%A4%E8%A1%8C%E7%A8%8B%E5%BA%8F/","wordCount":0,"datePublished":"2024-04-10T14:42:09.000Z","dateModified":"2024-04-10T14:42:43.242Z","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1660614606622/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}}]</script>
+  <script type="application/ld+json">[{"@context":"https://schema.org.cn","@type":"Organization","name":"YanYi Blog","url":"https://yanyi1991.github.io/","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1660614606622/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},{"@context":"https://schema.org.cn","@type":"Person","name":"YanYi","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1660614606622/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"https://yanyi1991.github.io/","sameAs":["https://github.com/volantis-x"],"description":"妍一的个人博客"},{"@context":"https://schema.org.cn","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"item":{"@id":"https://yanyi1991.github.io/","name":"YanYi Blog"}},{"@type":"ListItem","position":3,"item":{"@id":"https://yanyi1991.github.io/2024/04/10/Java开发命令行程序/","name":"Java开发命令行程序"}}]},{"@context":"https://schema.org.cn","@type":"WebSite","name":"YanYi Blog","url":"https://yanyi1991.github.io/","keywords":"个人博客","description":"妍一的个人博客","author":{"@type":"Person","name":"YanYi","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1660614606622/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"https://yanyi1991.github.io/","description":"妍一的个人博客"},"publisher":{"@type":"Organization","name":"YanYi Blog","url":"https://yanyi1991.github.io/","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1660614606622/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},"potentialAction":{"@type":"SearchAction","name":"Site Search","target":{"@type":"EntryPoint","urlTemplate":"https://yanyi1991.github.io?s={search_term_string}"},"query-input":"required name=search_term_string"}},{"@context":"https://schema.org.cn","@type":"BlogPosting","headline":"Java开发命令行程序","description":"妍一的个人博客","inLanguage":"en","mainEntityOfPage":{"@type":"WebPage","@id":"https://yanyi1991.github.io/2024/04/10/Java%E5%BC%80%E5%8F%91%E5%91%BD%E4%BB%A4%E8%A1%8C%E7%A8%8B%E5%BA%8F/"},"author":{"@type":"Person","name":"YanYi","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1660614606622/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"https://yanyi1991.github.io/"},"publisher":{"@type":"Organization","name":"YanYi Blog","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1660614606622/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},"url":"https://yanyi1991.github.io/2024/04/10/Java%E5%BC%80%E5%8F%91%E5%91%BD%E4%BB%A4%E8%A1%8C%E7%A8%8B%E5%BA%8F/","wordCount":0,"datePublished":"2024-04-10T14:42:09.000Z","dateModified":"2024-04-10T14:42:43.242Z","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1660614606622/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}}]</script>
 
 
 
