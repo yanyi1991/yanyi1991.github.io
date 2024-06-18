@@ -34,21 +34,23 @@
 
   <!-- feed -->
   <!-- 页面元数据 -->
-  <title>YanYi Blog</title>
-  <meta name="keywords" content="个人博客">
+  <title>Servlet - YanYi Blog</title>
+  <meta name="keywords" content="Java,html,jsp,个人博客">
   <meta desc name="description" content="妍一的个人博客 - YanYi - YanYi Blog">
   
 <meta property="og:type" content="article">
-<meta property="og:title" content="YanYi Blog">
+<meta property="og:title" content="Servlet">
 <meta property="og:url" content="https://yanyi1991.github.io/2024/06/18/%E5%AE%9E%E9%AA%8C%E4%B8%83-Servlet/index.html">
 <meta property="og:site_name" content="YanYi Blog">
-<meta property="og:description" content="title: 过滤器date: 2024-06-18 14:43:12headimg: https:&#x2F;&#x2F;t.mwm.moe&#x2F;pctags:  Java html jspcategories: 实验七  实验任务一1GetParameterTest.java  12345678910111213141516171819202122232425import java.io.*;  import jav">
+<meta property="og:description" content="实验任务一1GetParameterTest.java  12345678910111213141516171819202122232425import java.io.*;  import javax.servlet.ServletConfig;  import javax.servlet.annotation.WebServlet;  import javax.servlet.http.Htt">
 <meta property="og:locale" content="en_US">
 <meta property="og:image" content="https://unpkg.com/volantis-static@0.0.1660614606622/media/org.volantis/blog/favicon/android-chrome-192x192.png">
-<meta property="article:published_time" content="2024-06-18T06:46:12.983Z">
-<meta property="article:modified_time" content="2024-06-18T06:58:29.295Z">
+<meta property="article:published_time" content="2024-06-18T06:43:12.000Z">
+<meta property="article:modified_time" content="2024-06-18T07:04:00.119Z">
 <meta property="article:author" content="YanYi">
-<meta property="article:tag" content="个人博客">
+<meta property="article:tag" content="Java">
+<meta property="article:tag" content="html">
+<meta property="article:tag" content="jsp">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:image" content="https://unpkg.com/volantis-static@0.0.1660614606622/media/org.volantis/blog/favicon/android-chrome-192x192.png">
   <style>
@@ -2152,7 +2154,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 
 <script>
   window.pdata={}
-  pdata.ispage=false;
+  pdata.ispage=true;
   pdata.commentPath="";
   pdata.commentPlaceholder="";
   pdata.commentConfig={};
@@ -2160,7 +2162,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
     root: '/',
     debug: "env",
     default: {"avatar":"https://unpkg.com/volantis-static@0.0.1660614606622/media/placeholder/avatar/round/3442075.svg","link":"https://unpkg.com/volantis-static@0.0.1660614606622/media/placeholder/link/8f277b4ee0ecd.svg","cover":"https://unpkg.com/volantis-static@0.0.1660614606622/media/placeholder/cover/76b86c0226ffd.svg","image":"https://unpkg.com/volantis-static@0.0.1660614606622/media/placeholder/image/2659360.svg"},
-    lastupdate: new Date(1718693968131),
+    lastupdate: new Date(1718694264352),
     cdn: {
       izitoast_css: 'https://cdn.bootcdn.net/ajax/libs/izitoast/1.4.0/css/iziToast.min.css',
       izitoast_js: 'https://cdn.bootcdn.net/ajax/libs/izitoast/1.4.0/js/iziToast.min.js',
@@ -2602,31 +2604,98 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 
 
   
-    <span hidden>
-      <meta itemprop="image" content="https://unpkg.com/volantis-static@0.0.1660614606622/media/org.volantis/blog/favicon/android-chrome-192x192.png">
-    </span>
+    <div class='headimg-div'>
+      <a class='headimg-a'>
+        <img itemprop="image" class='headimg' src='https://t.mwm.moe/pc'/>
+      </a>
+    </div>
   
   <div class="article-meta" id="top">
     
     
     
-      <span hidden itemprop="name headline">
+      <h1 class="title" itemprop="name headline">
+        Servlet
+      </h1>
+      <div class='new-meta-box'>
         
+          
+            
+<div class='new-meta-item author' itemprop="author" itemscope itemtype="https://schema.org.cn/Person">
+  <a itemprop="url" class='author' href="/" rel="nofollow">
+    <img itemprop="image" src="https://cui1225.oss-cn-beijing.aliyuncs.com/img/%E5%A4%B4%E5%83%8F.jpg" class="lazyload" data-srcset="https://cui1225.oss-cn-beijing.aliyuncs.com/img/%E5%A4%B4%E5%83%8F.jpg" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==">
+    <p itemprop="name">妍一</p>
+  </a>
+</div>
+
+          
+        
+          
+            
+  
+  
+  
+  <div class='new-meta-item category'>
+    <i class="fa-solid fa-folder-open fa-fw" aria-hidden="true"></i>
+    <a class="category-link" href="/categories/%E5%AE%9E%E9%AA%8C%E4%B8%83/">实验七</a>
+    
+      <span hidden itemprop="about" itemscope itemtype="https://schema.org.cn/Thing">
+        <a href="/categories/%E5%AE%9E%E9%AA%8C%E4%B8%83/" itemprop="url"><span itemprop="name">实验七</span></a>
       </span>
+    
+  </div>
+  
+
+
+
+          
+        
+          
+            <div class="new-meta-item date" itemprop="dateCreated datePublished" datetime="2024-06-18T14:43:12+08:00">
+  <a class='notlink'>
+    <i class="fa-solid fa-calendar-alt fa-fw" aria-hidden="true"></i>
+    <p>发布于：Jun 18, 2024</p>
+  </a>
+</div>
+
+          
+        
+          
+            
+  <div class="new-meta-item wordcount">
+    <a class='notlink'>
+      <i class="fa-solid fa-keyboard fa-fw" aria-hidden="true"></i>
+      <p>851 words</p>
+    </a>
+  </div>
+  <div class="new-meta-item readtime">
+    <a class='notlink'>
+      <i class="fa-solid fa-hourglass-half fa-fw" aria-hidden="true"></i>
+      <p>5 min</p>
+    </a>
+  </div>
+
+
+          
+        
+          
+            
+
+
+
+          
+        
+        <!-- Custom Files topMeta begin-->
+        
+        <!-- Custom Files topMeta end-->
+      </div>
     
   </div>
 
 
   <div id="layoutHelper-page-plugins"></div>
   <div id="post-body" itemprop="articleBody">
-    <p>title: 过滤器<br>date: 2024-06-18 14:43:12<br>headimg: <a target="_blank" rel="noopener" href="https://t.mwm.moe/pc">https://t.mwm.moe/pc</a><br>tags:</p>
-<ul>
-<li>Java</li>
-<li>html</li>
-<li>jsp<br>categories:</li>
-<li>实验七</li>
-</ul>
-<h1 id="实验任务一"><a href="#实验任务一" class="headerlink" title="实验任务一"></a>实验任务一</h1><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">GetParameterTest.java</span><br></pre></td></tr></table></figure>
+    <h1 id="实验任务一"><a href="#实验任务一" class="headerlink" title="实验任务一"></a>实验任务一</h1><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">GetParameterTest.java</span><br></pre></td></tr></table></figure>
 
 <figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> java.io.*;  </span><br><span class="line"><span class="keyword">import</span> javax.servlet.ServletConfig;  </span><br><span class="line"><span class="keyword">import</span> javax.servlet.annotation.WebServlet;  </span><br><span class="line"><span class="keyword">import</span> javax.servlet.http.HttpServlet;  </span><br><span class="line"><span class="keyword">import</span> javax.servlet.http.HttpServletRequest;  </span><br><span class="line"><span class="keyword">import</span> javax.servlet.http.HttpServletResponse;  </span><br><span class="line"></span><br><span class="line"><span class="meta">@WebServlet(name = &quot;GetParameterTest&quot;, value = &quot;/GetParameterTest&quot;)</span>  </span><br><span class="line"><span class="keyword">public</span> <span class="keyword">class</span> <span class="title class_">GetParameterTest</span> <span class="keyword">extends</span> <span class="title class_">HttpServlet</span> &#123;  </span><br><span class="line">    <span class="meta">@Override</span>  </span><br><span class="line">    <span class="keyword">protected</span> <span class="keyword">void</span> <span class="title function_">doGet</span><span class="params">(HttpServletRequest request, HttpServletResponse response)</span> <span class="keyword">throws</span> IOException &#123;  </span><br><span class="line">        response.setContentType(<span class="string">&quot;text/html;charset=utf-8&quot;</span>);  </span><br><span class="line">        <span class="type">PrintWriter</span> <span class="variable">out</span> <span class="operator">=</span> response.getWriter();  </span><br><span class="line">        <span class="type">ServletConfig</span> <span class="variable">config</span> <span class="operator">=</span> <span class="built_in">this</span>.getServletConfig();  </span><br><span class="line">        <span class="type">String</span> <span class="variable">author</span> <span class="operator">=</span> config.getInitParameter(<span class="string">&quot;author&quot;</span>);  </span><br><span class="line">        <span class="type">String</span> <span class="variable">school</span> <span class="operator">=</span> config.getInitParameter(<span class="string">&quot;school&quot;</span>);  </span><br><span class="line">        <span class="type">String</span> <span class="variable">name</span> <span class="operator">=</span> config.getInitParameter(<span class="string">&quot;Servlet名&quot;</span>);  </span><br><span class="line">        out.println(<span class="string">&quot;school：&quot;</span>+school+<span class="string">&quot;&lt;br&gt;&quot;</span>);  </span><br><span class="line">        out.println(<span class="string">&quot;author：&quot;</span>+author+<span class="string">&quot;&lt;br&gt;&quot;</span>);  </span><br><span class="line">        out.println(<span class="string">&quot;Servlet名：&quot;</span>+name+<span class="string">&quot;&lt;br&gt;&quot;</span>);  </span><br><span class="line">    &#125;  </span><br><span class="line">    <span class="meta">@Override</span>  </span><br><span class="line">    <span class="keyword">protected</span> <span class="keyword">void</span> <span class="title function_">doPost</span><span class="params">(HttpServletRequest request, HttpServletResponse response)</span> <span class="keyword">throws</span> IOException &#123; </span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
@@ -2682,7 +2751,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
     <div class='new-meta-box'>
       
         
-          <div class="new-meta-item date" itemprop="dateModified" datetime="2024-06-18T14:58:29+08:00">
+          <div class="new-meta-item date" itemprop="dateModified" datetime="2024-06-18T15:04:00+08:00">
   <a class='notlink'>
     <i class="fa-solid fa-edit fa-fw" aria-hidden="true"></i>
     <p>更新于：Jun 18, 2024</p>
@@ -2693,6 +2762,13 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
       
         
           
+  
+  
+  
+  <div class="new-meta-item meta-tags"><a class="tag" href="/tags/Java/" rel="nofollow"><i class="fa-solid fa-hashtag fa-fw" aria-hidden="true"></i><p>Java</p></a></div> <div class="new-meta-item meta-tags"><a class="tag" href="/tags/html/" rel="nofollow"><i class="fa-solid fa-hashtag fa-fw" aria-hidden="true"></i><p>html</p></a></div> <div class="new-meta-item meta-tags"><a class="tag" href="/tags/jsp/" rel="nofollow"><i class="fa-solid fa-hashtag fa-fw" aria-hidden="true"></i><p>jsp</p></a></div>
+  <span hidden itemprop="keywords">Java html jsp</span>
+  
+
 
         
       
@@ -2704,7 +2780,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
       
         <a class="-mob-share-qq" title="" rel="external nofollow noopener noreferrer noopener"
           
-          target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=https://yanyi1991.github.io/2024/06/18/%E5%AE%9E%E9%AA%8C%E4%B8%83-Servlet/&title= - YanYi Blog&summary="
+          target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=https://yanyi1991.github.io/2024/06/18/%E5%AE%9E%E9%AA%8C%E4%B8%83-Servlet/&title=Servlet - YanYi Blog&summary="
           
           >
           
@@ -2716,7 +2792,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
       
         <a class="-mob-share-qzone" title="" rel="external nofollow noopener noreferrer noopener"
           
-          target="_blank" href="https://sns.qzone.qq.com/cgi-bin/qzshare/cgi_qzshare_onekey?url=https://yanyi1991.github.io/2024/06/18/%E5%AE%9E%E9%AA%8C%E4%B8%83-Servlet/&title= - YanYi Blog&summary="
+          target="_blank" href="https://sns.qzone.qq.com/cgi-bin/qzshare/cgi_qzshare_onekey?url=https://yanyi1991.github.io/2024/06/18/%E5%AE%9E%E9%AA%8C%E4%B8%83-Servlet/&title=Servlet - YanYi Blog&summary="
           
           >
           
@@ -2728,7 +2804,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
       
         <a class="-mob-share-weibo" title="" rel="external nofollow noopener noreferrer noopener"
           
-          target="_blank" href="http://service.weibo.com/share/share.php?url=https://yanyi1991.github.io/2024/06/18/%E5%AE%9E%E9%AA%8C%E4%B8%83-Servlet/&title= - YanYi Blog&summary="
+          target="_blank" href="http://service.weibo.com/share/share.php?url=https://yanyi1991.github.io/2024/06/18/%E5%AE%9E%E9%AA%8C%E4%B8%83-Servlet/&title=Servlet - YanYi Blog&summary="
           
           >
           
@@ -2753,7 +2829,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
   <div class="new-meta-item wordcount">
     <a class='notlink'>
       <i class="fa-solid fa-keyboard fa-fw" aria-hidden="true"></i>
-      <p>873 words</p>
+      <p>851 words</p>
     </a>
   </div>
   <div class="new-meta-item readtime">
@@ -3889,7 +3965,7 @@ window.matchMedia('(prefers-color-scheme: light)').addListener(darkModelListener
 </script>
 
 
-  <script type="application/ld+json">[{"@context":"https://schema.org.cn","@type":"Organization","name":"YanYi Blog","url":"https://yanyi1991.github.io/","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1660614606622/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},{"@context":"https://schema.org.cn","@type":"Person","name":"YanYi","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1660614606622/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"https://yanyi1991.github.io/","sameAs":["https://github.com/volantis-x"],"description":"妍一的个人博客"},{"@context":"https://schema.org.cn","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"item":{"@id":"https://yanyi1991.github.io/","name":"YanYi Blog"}},{"@type":"ListItem","position":3,"item":{"@id":"https://yanyi1991.github.io/2024/06/18/实验七-Servlet/"}}]},{"@context":"https://schema.org.cn","@type":"WebSite","name":"YanYi Blog","url":"https://yanyi1991.github.io/","keywords":"个人博客","description":"妍一的个人博客","author":{"@type":"Person","name":"YanYi","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1660614606622/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"https://yanyi1991.github.io/","description":"妍一的个人博客"},"publisher":{"@type":"Organization","name":"YanYi Blog","url":"https://yanyi1991.github.io/","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1660614606622/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},"potentialAction":{"@type":"SearchAction","name":"Site Search","target":{"@type":"EntryPoint","urlTemplate":"https://yanyi1991.github.io?s={search_term_string}"},"query-input":"required name=search_term_string"}},{"@context":"https://schema.org.cn","@type":"BlogPosting","description":"妍一的个人博客","inLanguage":"en","mainEntityOfPage":{"@type":"WebPage","@id":"https://yanyi1991.github.io/2024/06/18/%E5%AE%9E%E9%AA%8C%E4%B8%83-Servlet/"},"author":{"@type":"Person","name":"YanYi","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1660614606622/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"https://yanyi1991.github.io/"},"publisher":{"@type":"Organization","name":"YanYi Blog","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1660614606622/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},"url":"https://yanyi1991.github.io/2024/06/18/%E5%AE%9E%E9%AA%8C%E4%B8%83-Servlet/","wordCount":0,"datePublished":"2024-06-18T06:46:12.983Z","dateModified":"2024-06-18T06:58:29.295Z","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1660614606622/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}}]</script>
+  <script type="application/ld+json">[{"@context":"https://schema.org.cn","@type":"Organization","name":"YanYi Blog","url":"https://yanyi1991.github.io/","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1660614606622/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},{"@context":"https://schema.org.cn","@type":"Person","name":"YanYi","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1660614606622/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"https://yanyi1991.github.io/","sameAs":["https://github.com/volantis-x"],"description":"妍一的个人博客"},{"@context":"https://schema.org.cn","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"item":{"@id":"https://yanyi1991.github.io/","name":"YanYi Blog"}},{"@type":"ListItem","position":2,"item":{"@id":"https://yanyi1991.github.io/categories/实验七/","name":"实验七"}},{"@type":"ListItem","position":3,"item":{"@id":"https://yanyi1991.github.io/2024/06/18/实验七-Servlet/","name":"Servlet"}}]},{"@context":"https://schema.org.cn","@type":"WebSite","name":"YanYi Blog","url":"https://yanyi1991.github.io/","keywords":"个人博客","description":"妍一的个人博客","author":{"@type":"Person","name":"YanYi","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1660614606622/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"https://yanyi1991.github.io/","description":"妍一的个人博客"},"publisher":{"@type":"Organization","name":"YanYi Blog","url":"https://yanyi1991.github.io/","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1660614606622/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},"potentialAction":{"@type":"SearchAction","name":"Site Search","target":{"@type":"EntryPoint","urlTemplate":"https://yanyi1991.github.io?s={search_term_string}"},"query-input":"required name=search_term_string"}},{"@context":"https://schema.org.cn","@type":"BlogPosting","headline":"Servlet","description":"妍一的个人博客","inLanguage":"en","mainEntityOfPage":{"@type":"WebPage","@id":"https://yanyi1991.github.io/2024/06/18/%E5%AE%9E%E9%AA%8C%E4%B8%83-Servlet/"},"author":{"@type":"Person","name":"YanYi","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1660614606622/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"https://yanyi1991.github.io/"},"publisher":{"@type":"Organization","name":"YanYi Blog","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1660614606622/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},"url":"https://yanyi1991.github.io/2024/06/18/%E5%AE%9E%E9%AA%8C%E4%B8%83-Servlet/","wordCount":0,"datePublished":"2024-06-18T06:43:12.000Z","dateModified":"2024-06-18T07:04:00.119Z","articleSection":"实验七","keywords":"Java,html,jsp","image":{"@type":"ImageObject","url":"https://t.mwm.moe/pc","width":1024,"height":768}}]</script>
 
 
 
