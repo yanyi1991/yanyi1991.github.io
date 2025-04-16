@@ -1363,200 +1363,6 @@ SRAM启动
       </tags>
   </entry>
   <entry>
-    <title>Servlet</title>
-    <url>/2024/06/18/%E5%AE%9E%E9%AA%8C%E4%B8%83-Servlet/</url>
-    <content><![CDATA[实验任务一GetParameterTest.java
-
-import java.io.*;  
-import javax.servlet.ServletConfig;  
-import javax.servlet.annotation.WebServlet;  
-import javax.servlet.http.HttpServlet;  
-import javax.servlet.http.HttpServletRequest;  
-import javax.servlet.http.HttpServletResponse;  
-
-@WebServlet(name = &quot;GetParameterTest&quot;, value = &quot;/GetParameterTest&quot;)  
-public class GetParameterTest extends HttpServlet &#123;  
-    @Override  
-    protected void doGet(HttpServletRequest request, HttpServletResponse response) throws IOException &#123;  
-        response.setContentType(&quot;text/html;charset=utf-8&quot;);  
-        PrintWriter out = response.getWriter();  
-        ServletConfig config = this.getServletConfig();  
-        String author = config.getInitParameter(&quot;author&quot;);  
-        String school = config.getInitParameter(&quot;school&quot;);  
-        String name = config.getInitParameter(&quot;Servlet名&quot;);  
-        out.println(&quot;school：&quot;+school+&quot;&lt;br&gt;&quot;);  
-        out.println(&quot;author：&quot;+author+&quot;&lt;br&gt;&quot;);  
-        out.println(&quot;Servlet名：&quot;+name+&quot;&lt;br&gt;&quot;);  
-    &#125;  
-    @Override  
-    protected void doPost(HttpServletRequest request, HttpServletResponse response) throws IOException &#123; 
-    &#125;
-&#125;
-
-web.xml
-
-&lt;servlet&gt;
-    &lt;servlet-name&gt;GetParameterTest&lt;/servlet-name&gt;
-    &lt;servlet-class&gt;MyServlet.GetParameterTest&lt;/servlet-class&gt;
-    &lt;init-param&gt;
-        &lt;param-name&gt;author&lt;/param-name&gt;
-        &lt;param-value&gt;陈彩华&lt;/param-value&gt;
-    &lt;/init-param&gt;
-    &lt;init-param&gt;
-        &lt;param-name&gt;school&lt;/param-name&gt;
-        &lt;param-value&gt;湖南广播电视大学&lt;/param-value&gt;
-    &lt;/init-param&gt;
-    &lt;init-param&gt;
-        &lt;param-name&gt;Servlet名&lt;/param-name&gt;
-        &lt;param-value&gt;GetParameterTest&lt;/param-value&gt;
-    &lt;/init-param&gt;
-&lt;/servlet&gt;
-&lt;servlet-mapping&gt;
-    &lt;servlet-name&gt;GetParameterTest&lt;/servlet-name&gt;
-    &lt;url-pattern&gt;/GetParameterTest&lt;/url-pattern&gt;
-&lt;/servlet-mapping&gt;
-
-实验任务二GetWebParameter.java
-
-import java.io.*;
-import javax.servlet.ServletContext;
-import javax.servlet.annotation.WebServlet;
-import javax.servlet.http.HttpServlet;
-import javax.servlet.http.HttpServletRequest;
-import javax.servlet.http.HttpServletResponse;
-
-@WebServlet(name = &quot;GetWebParameter&quot;, value = &quot;/GetWebParameter&quot;)
-public class GetWebParameter extends HttpServlet &#123;
-
-    @Override
-    protected void doGet(HttpServletRequest request, HttpServletResponse response) throws IOException &#123;
-        response.setContentType(&quot;text/html;charset=utf-8&quot;);
-        PrintWriter out = response.getWriter();
-        ServletContext context = this.getServletContext();
-        out.println(&quot;Web项目的所有参数如下&quot;+&quot;&lt;br&gt;&quot;);
-        out.println(&quot;first：&quot; + context.getInitParameter(&quot;first&quot;) + &quot;&lt;br&gt;&quot;);
-        out.println(&quot;second：&quot; + context.getInitParameter(&quot;second&quot;));
-    &#125;
-
-    @Override
-    protected void doPost(HttpServletRequest request, HttpServletResponse response) throws IOException &#123;
-
-    &#125;
-&#125;
-
-web.xml
-
-&lt;context-param&gt;
-    &lt;param-name&gt;first&lt;/param-name&gt;
-    &lt;param-value&gt;这是第一个参数的值&lt;/param-value&gt;
-&lt;/context-param&gt;
-&lt;context-param&gt;
-    &lt;param-name&gt;second&lt;/param-name&gt;
-    &lt;param-value&gt;这是第二个参数的值&lt;/param-value&gt;
-&lt;/context-param&gt;
-
-实验任务三ShareParameterA
-
-import java.io.*;
-import javax.servlet.ServletConfig;
-import javax.servlet.ServletContext;
-import javax.servlet.annotation.WebServlet;
-import javax.servlet.http.HttpServlet;
-import javax.servlet.http.HttpServletRequest;
-import javax.servlet.http.HttpServletResponse;
-
-@WebServlet(name = &quot;ShareParameterA&quot;, value = &quot;/ShareParameterA&quot;)
-public class ShareParameterA extends HttpServlet &#123;
-
-    @Override
-    protected void doGet(HttpServletRequest request, HttpServletResponse response) throws IOException &#123;
-        ServletConfig config = this.getServletConfig();
-        ServletContext context = this.getServletContext();
-        context.setAttribute(&quot;a1&quot;,config.getInitParameter(&quot;a&quot;));
-    &#125;
-
-    @Override
-    protected void doPost(HttpServletRequest request, HttpServletResponse response) throws IOException &#123;
-
-    &#125;
-&#125;
-
-ShareParameterB
-
-import java.io.*;
-import javax.servlet.ServletContext;
-import javax.servlet.annotation.WebServlet;
-import javax.servlet.http.HttpServlet;
-import javax.servlet.http.HttpServletRequest;
-import javax.servlet.http.HttpServletResponse;
-
-@WebServlet(name = &quot;ShareParameterB&quot;, value = &quot;/ShareParameterB&quot;)
-public class ShareParameterB extends HttpServlet &#123;
-
-    @Override
-    protected void doGet(HttpServletRequest request, HttpServletResponse response) throws IOException &#123;
-        response.setContentType(&quot;text/html;charset=utf-8&quot;);
-        PrintWriter out = response.getWriter();
-        ServletContext context = this.getServletContext();
-        out.println(context.getAttribute(&quot;a1&quot;));
-    &#125;
-
-    @Override
-    protected void doPost(HttpServletRequest request, HttpServletResponse response) throws IOException &#123;
-
-    &#125;
-&#125;
-
-实验任务四data.properties
-
-address=ChangSha
-school=HXX
-
-GetResourceServlet
-
-import java.io.*;
-import java.util.Properties;
-import javax.servlet.ServletContext;
-import javax.servlet.annotation.WebServlet;
-import javax.servlet.http.HttpServlet;
-import javax.servlet.http.HttpServletRequest;
-import javax.servlet.http.HttpServletResponse;
-
-@WebServlet(name = &quot;GetResourceServlet&quot;, value = &quot;/GetResourceServlet&quot;)
-public class GetResourceServlet extends HttpServlet &#123;
-
-    @Override
-    protected void doGet(HttpServletRequest request, HttpServletResponse response) throws IOException &#123;
-        response.setContentType(&quot;text/html;charset=utf-8&quot;);
-        PrintWriter out = response.getWriter();
-        ServletContext context=getServletContext();
-        String path=context.getRealPath(&quot;data.properties&quot;);
-        FileInputStream fis=new FileInputStream(path);
-        Properties pros=new Properties();
-        pros.load(fis);
-        String address=pros.getProperty(&quot;address&quot;);
-        String school=pros.getProperty(&quot;school&quot;);
-        out.println(&quot;地址：&quot;+address+&quot;&lt;br&gt;&quot;);
-        out.println(&quot;学校：&quot;+school);
-    &#125;
-
-    @Override
-    protected void doPost(HttpServletRequest request, HttpServletResponse response) throws IOException &#123;
-
-    &#125;
-&#125;
-
-注：这么详细的配置还看不懂的话，抓紧退学]]></content>
-      <categories>
-        <category>实验七</category>
-      </categories>
-      <tags>
-        <tag>Java</tag>
-        <tag>html</tag>
-        <tag>jsp</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>stm32_Day2</title>
     <url>/2024/04/16/stm32-Day2/</url>
     <content><![CDATA[Nucleo开发板外围电路设计1．指示灯电路（高电平&#x2F;低电平驱动）高电平：指示灯的负极接地，指示灯的正极通过限流电阻Rs和GPIO引脚连接（引脚输出高电平开启／低电平关闭）
@@ -1580,6 +1386,61 @@ ST morpho：CN7&#x2F;CN10（双排插针）
       </categories>
       <tags>
         <tag>STM32</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>绪论</title>
+    <url>/2024/08/30/%E5%B5%8C%E5%85%A5%E5%BC%8F%E7%B3%BB%E7%BB%9F%E5%8E%9F%E7%90%86%E5%8F%8A%E5%BA%94%E7%94%A8/</url>
+    <content><![CDATA[1.嵌入式系统定义国际定义：根据（IEEE）将嵌入式系统定义为用于控制、监视或者辅助操作机器和设备的装置–主要根   据其应用对象方式定义
+国内定义：嵌入式系统是一个具有特殊功能和用途的计算机软硬件集合体–以系统的应用为中心，计算机技术为基础，软件与硬件的结合的专用计算机系统，此系统对功能、可靠性、成本、体积、功能具有严格要求
+2.嵌入式系统的特点专用型  实时性  生命周期长  小体积、低功耗  低成本  高稳定性  不可垄断性  
+3.嵌入式系统的应用消费电子  工业控制  网络应用  军用领域
+4.通用机与嵌入式系统区别PC机系统：硬件：主机（CPU、主板、内存条、显卡）、显示器
+软件：相对独立（可安装&#x2F;拆卸）
+操作系统：Windows Linux iOS
+嵌入式系统：硬件：MCU（将CPU、ROM-只读存储器、RAM-随机存储器、定时器、I&#x2F;O接口集成在一片芯片上，形成芯片级计算机）、显示屏
+软件：集成&#x2F;固化在芯片中，用户不能更改
+操作系统：Linux、winCE、Android
+SOC（片上系统）以处理器为核心，加上外围功能（集成USB、ADC&#x2F;DAC、以太网模块）的芯片，称为SOC片上系统
+处理器分类嵌入式处理器  
+是嵌入式系统的核心，是控制，辅助系统运行的硬件单元。目前可以分为：嵌入式微控制器（MCU），嵌入式微处理器（MPU），嵌入式DSP，嵌入式SoC（FPGA）
+通用处理器
+是以x86（x86文件）体系架构的被INTEL和AMD两家公司垄断，追求更快的运算速度、更大的数据吞吐量、有32、64位处理器等
+嵌入式微控制器（MCU）
+又称单片机，典型的MCU厂商有：ST（意法半导体）、TI（德州仪器）等
+嵌入式微处理器（MPU）
+由CPU演变而来，增强版的CPU，主要有：麒麟、A处理器、三星、高通等
+嵌入式DSP
+ 主要专门用于信号处理方面，为了追求高执行效率，不适合运行操作系统，核心代码使用汇编
+嵌入式SoC（FPGA）
+可编程逻辑技术把整个系统放到一块硅片上，称作SOC，如Altera公司的FPGA 芯片、 Xilinx公司的FPGA芯片
+ARM处理器
+ARM处理器占据了低功耗、低成本和高性能的嵌入式系统应用的大部分领域，特别是在移动市场，ARM处理器基本处于垄断地位，当前的智能手机的处理器基本都是各公司购买的ARM处理器内核开发出来的。
+Cortex系列处理器：ARM公司在经典处理器ARM11以后的产品都改用Cortex命名，并分成A、R和M三类。
+存储系统随机存取存储器（RAM）
+ 存储单元的内容可按需随意取出或存入，读写速度很快，且速度与存储单元的位置无关。RAM在断电时将丢失其存储内容，RAM主要用于存储短时间使用的程序。
+静态随机存取存储器（Static Random Access Memory，SRAM）
+动态随机存取存储器（Dynamic Random Access Memory，DRAM）
+同步动态随机存储器（Synchronous Dynamic Random Access Memory，SDRAM）
+只读存储器（ROM）
+ 只读存储器中的数据可以在掉电后不丢失，ROM主要用于存储程序和一些数据（常量、系数等），存储在其中的数据只能读不能改；同时还存在一种需要使用特定的方法擦除和烧录数据的ROM，及电可擦除可编程ROM（EEPROM）
+闪存存储器（FLASH）
+闪存存储器是电可擦除的ROM，在使用上与EEPROM类似。但是二者的寻址方法不同，存储单元的结构也不同，Flash存储器的电路结构较简单，同样容量占芯片面积较小，成本比EEPROM低。常见固态硬盘和优盘都是闪存存储器。
+嵌入式软件开发主要有两种方式
+直接在芯片上进行应用开发   在芯片上运行操作系统
+嵌入式系统软件结构一般包含3个层面：设备驱动层、OS层、应用层
+嵌入式操作系统可以分为嵌入式非实时操作系统和嵌入式实时操作系统（RTOS）
+嵌入式系统的发展历程单片机时代（1970年代末）
+微控制器时代（1980年代）
+嵌入式操作系统时代（1990年代）
+嵌入式处理器时代（2000年代至今）
+]]></content>
+      <categories>
+        <category>嵌入式·第一章</category>
+      </categories>
+      <tags>
+        <tag>硬件</tag>
+        <tag>嵌入式</tag>
       </tags>
   </entry>
   <entry>
@@ -1881,68 +1742,6 @@ web.xml
       </tags>
   </entry>
   <entry>
-    <title>绪论</title>
-    <url>/2024/08/30/%E5%B5%8C%E5%85%A5%E5%BC%8F%E7%B3%BB%E7%BB%9F%E5%8E%9F%E7%90%86%E5%8F%8A%E5%BA%94%E7%94%A8/</url>
-    <content><![CDATA[1.嵌入式系统定义国际定义：根据（IEEE）将嵌入式系统定义为用于控制、监视或者辅助操作机器和设备的装置–主要根   据其应用对象方式定义
-国内定义：嵌入式系统是一个具有特殊功能和用途的计算机软硬件集合体–以系统的应用为中心，计算机技术为基础，软件与硬件的结合的专用计算机系统，此系统对功能、可靠性、成本、体积、功能具有严格要求
-2.嵌入式系统的特点专用型  实时性  生命周期长  小体积、低功耗  低成本  高稳定性  不可垄断性  
-3.嵌入式系统的应用消费电子  工业控制  网络应用  军用领域
-4.通用机与嵌入式系统区别PC机系统：硬件：主机（CPU、主板、内存条、显卡）、显示器
-软件：相对独立（可安装&#x2F;拆卸）
-操作系统：Windows Linux iOS
-嵌入式系统：硬件：MCU（将CPU、ROM-只读存储器、RAM-随机存储器、定时器、I&#x2F;O接口集成在一片芯片上，形成芯片级计算机）、显示屏
-软件：集成&#x2F;固化在芯片中，用户不能更改
-操作系统：Linux、winCE、Android
-SOC（片上系统）以处理器为核心，加上外围功能（集成USB、ADC&#x2F;DAC、以太网模块）的芯片，称为SOC片上系统
-处理器分类嵌入式处理器  
-是嵌入式系统的核心，是控制，辅助系统运行的硬件单元。目前可以分为：嵌入式微控制器（MCU），嵌入式微处理器（MPU），嵌入式DSP，嵌入式SoC（FPGA）
-通用处理器
-是以x86（x86文件）体系架构的被INTEL和AMD两家公司垄断，追求更快的运算速度、更大的数据吞吐量、有32、64位处理器等
-嵌入式微控制器（MCU）
-又称单片机，典型的MCU厂商有：ST（意法半导体）、TI（德州仪器）等
-嵌入式微处理器（MPU）
-由CPU演变而来，增强版的CPU，主要有：麒麟、A处理器、三星、高通等
-嵌入式DSP
- 主要专门用于信号处理方面，为了追求高执行效率，不适合运行操作系统，核心代码使用汇编
-嵌入式SoC（FPGA）
-可编程逻辑技术把整个系统放到一块硅片上，称作SOC，如Altera公司的FPGA 芯片、 Xilinx公司的FPGA芯片
-ARM处理器
-ARM处理器占据了低功耗、低成本和高性能的嵌入式系统应用的大部分领域，特别是在移动市场，ARM处理器基本处于垄断地位，当前的智能手机的处理器基本都是各公司购买的ARM处理器内核开发出来的。
-Cortex系列处理器：ARM公司在经典处理器ARM11以后的产品都改用Cortex命名，并分成A、R和M三类。
-存储系统随机存取存储器（RAM）
- 存储单元的内容可按需随意取出或存入，读写速度很快，且速度与存储单元的位置无关。RAM在断电时将丢失其存储内容，RAM主要用于存储短时间使用的程序。
-静态随机存取存储器（Static Random Access Memory，SRAM）
-动态随机存取存储器（Dynamic Random Access Memory，DRAM）
-同步动态随机存储器（Synchronous Dynamic Random Access Memory，SDRAM）
-只读存储器（ROM）
- 只读存储器中的数据可以在掉电后不丢失，ROM主要用于存储程序和一些数据（常量、系数等），存储在其中的数据只能读不能改；同时还存在一种需要使用特定的方法擦除和烧录数据的ROM，及电可擦除可编程ROM（EEPROM）
-闪存存储器（FLASH）
-闪存存储器是电可擦除的ROM，在使用上与EEPROM类似。但是二者的寻址方法不同，存储单元的结构也不同，Flash存储器的电路结构较简单，同样容量占芯片面积较小，成本比EEPROM低。常见固态硬盘和优盘都是闪存存储器。
-嵌入式软件开发主要有两种方式
-直接在芯片上进行应用开发   在芯片上运行操作系统
-嵌入式系统软件结构一般包含3个层面：设备驱动层、OS层、应用层
-嵌入式操作系统可以分为嵌入式非实时操作系统和嵌入式实时操作系统（RTOS）
-嵌入式系统的发展历程单片机时代（1970年代末）
-微控制器时代（1980年代）
-嵌入式操作系统时代（1990年代）
-嵌入式处理器时代（2000年代至今）
-]]></content>
-      <categories>
-        <category>嵌入式·第一章</category>
-      </categories>
-      <tags>
-        <tag>硬件</tag>
-        <tag>嵌入式</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>测试</title>
-    <url>/2024/05/29/%E6%B5%8B%E8%AF%95/</url>
-    <content><![CDATA[
-
-]]></content>
-  </entry>
-  <entry>
     <title>麻辣鱼</title>
     <url>/2024/04/09/%E9%BA%BB%E8%BE%A3%E9%B1%BC/</url>
     <content><![CDATA[Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hexo, you can find the answer in troubleshooting or you can ask me on GitHub.
@@ -1958,6 +1757,207 @@ More info: Generating
 Deploy to remote sites$ hexo deploy
 
 More info: Deployment
+]]></content>
+  </entry>
+  <entry>
+    <title>Servlet</title>
+    <url>/2024/06/18/%E5%AE%9E%E9%AA%8C%E4%B8%83-Servlet/</url>
+    <content><![CDATA[实验任务一GetParameterTest.java
+
+import java.io.*;  
+import javax.servlet.ServletConfig;  
+import javax.servlet.annotation.WebServlet;  
+import javax.servlet.http.HttpServlet;  
+import javax.servlet.http.HttpServletRequest;  
+import javax.servlet.http.HttpServletResponse;  
+
+@WebServlet(name = &quot;GetParameterTest&quot;, value = &quot;/GetParameterTest&quot;)  
+public class GetParameterTest extends HttpServlet &#123;  
+    @Override  
+    protected void doGet(HttpServletRequest request, HttpServletResponse response) throws IOException &#123;  
+        response.setContentType(&quot;text/html;charset=utf-8&quot;);  
+        PrintWriter out = response.getWriter();  
+        ServletConfig config = this.getServletConfig();  
+        String author = config.getInitParameter(&quot;author&quot;);  
+        String school = config.getInitParameter(&quot;school&quot;);  
+        String name = config.getInitParameter(&quot;Servlet名&quot;);  
+        out.println(&quot;school：&quot;+school+&quot;&lt;br&gt;&quot;);  
+        out.println(&quot;author：&quot;+author+&quot;&lt;br&gt;&quot;);  
+        out.println(&quot;Servlet名：&quot;+name+&quot;&lt;br&gt;&quot;);  
+    &#125;  
+    @Override  
+    protected void doPost(HttpServletRequest request, HttpServletResponse response) throws IOException &#123; 
+    &#125;
+&#125;
+
+web.xml
+
+&lt;servlet&gt;
+    &lt;servlet-name&gt;GetParameterTest&lt;/servlet-name&gt;
+    &lt;servlet-class&gt;MyServlet.GetParameterTest&lt;/servlet-class&gt;
+    &lt;init-param&gt;
+        &lt;param-name&gt;author&lt;/param-name&gt;
+        &lt;param-value&gt;陈彩华&lt;/param-value&gt;
+    &lt;/init-param&gt;
+    &lt;init-param&gt;
+        &lt;param-name&gt;school&lt;/param-name&gt;
+        &lt;param-value&gt;湖南广播电视大学&lt;/param-value&gt;
+    &lt;/init-param&gt;
+    &lt;init-param&gt;
+        &lt;param-name&gt;Servlet名&lt;/param-name&gt;
+        &lt;param-value&gt;GetParameterTest&lt;/param-value&gt;
+    &lt;/init-param&gt;
+&lt;/servlet&gt;
+&lt;servlet-mapping&gt;
+    &lt;servlet-name&gt;GetParameterTest&lt;/servlet-name&gt;
+    &lt;url-pattern&gt;/GetParameterTest&lt;/url-pattern&gt;
+&lt;/servlet-mapping&gt;
+
+实验任务二GetWebParameter.java
+
+import java.io.*;
+import javax.servlet.ServletContext;
+import javax.servlet.annotation.WebServlet;
+import javax.servlet.http.HttpServlet;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+
+@WebServlet(name = &quot;GetWebParameter&quot;, value = &quot;/GetWebParameter&quot;)
+public class GetWebParameter extends HttpServlet &#123;
+
+    @Override
+    protected void doGet(HttpServletRequest request, HttpServletResponse response) throws IOException &#123;
+        response.setContentType(&quot;text/html;charset=utf-8&quot;);
+        PrintWriter out = response.getWriter();
+        ServletContext context = this.getServletContext();
+        out.println(&quot;Web项目的所有参数如下&quot;+&quot;&lt;br&gt;&quot;);
+        out.println(&quot;first：&quot; + context.getInitParameter(&quot;first&quot;) + &quot;&lt;br&gt;&quot;);
+        out.println(&quot;second：&quot; + context.getInitParameter(&quot;second&quot;));
+    &#125;
+
+    @Override
+    protected void doPost(HttpServletRequest request, HttpServletResponse response) throws IOException &#123;
+
+    &#125;
+&#125;
+
+web.xml
+
+&lt;context-param&gt;
+    &lt;param-name&gt;first&lt;/param-name&gt;
+    &lt;param-value&gt;这是第一个参数的值&lt;/param-value&gt;
+&lt;/context-param&gt;
+&lt;context-param&gt;
+    &lt;param-name&gt;second&lt;/param-name&gt;
+    &lt;param-value&gt;这是第二个参数的值&lt;/param-value&gt;
+&lt;/context-param&gt;
+
+实验任务三ShareParameterA
+
+import java.io.*;
+import javax.servlet.ServletConfig;
+import javax.servlet.ServletContext;
+import javax.servlet.annotation.WebServlet;
+import javax.servlet.http.HttpServlet;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+
+@WebServlet(name = &quot;ShareParameterA&quot;, value = &quot;/ShareParameterA&quot;)
+public class ShareParameterA extends HttpServlet &#123;
+
+    @Override
+    protected void doGet(HttpServletRequest request, HttpServletResponse response) throws IOException &#123;
+        ServletConfig config = this.getServletConfig();
+        ServletContext context = this.getServletContext();
+        context.setAttribute(&quot;a1&quot;,config.getInitParameter(&quot;a&quot;));
+    &#125;
+
+    @Override
+    protected void doPost(HttpServletRequest request, HttpServletResponse response) throws IOException &#123;
+
+    &#125;
+&#125;
+
+ShareParameterB
+
+import java.io.*;
+import javax.servlet.ServletContext;
+import javax.servlet.annotation.WebServlet;
+import javax.servlet.http.HttpServlet;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+
+@WebServlet(name = &quot;ShareParameterB&quot;, value = &quot;/ShareParameterB&quot;)
+public class ShareParameterB extends HttpServlet &#123;
+
+    @Override
+    protected void doGet(HttpServletRequest request, HttpServletResponse response) throws IOException &#123;
+        response.setContentType(&quot;text/html;charset=utf-8&quot;);
+        PrintWriter out = response.getWriter();
+        ServletContext context = this.getServletContext();
+        out.println(context.getAttribute(&quot;a1&quot;));
+    &#125;
+
+    @Override
+    protected void doPost(HttpServletRequest request, HttpServletResponse response) throws IOException &#123;
+
+    &#125;
+&#125;
+
+实验任务四data.properties
+
+address=ChangSha
+school=HXX
+
+GetResourceServlet
+
+import java.io.*;
+import java.util.Properties;
+import javax.servlet.ServletContext;
+import javax.servlet.annotation.WebServlet;
+import javax.servlet.http.HttpServlet;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+
+@WebServlet(name = &quot;GetResourceServlet&quot;, value = &quot;/GetResourceServlet&quot;)
+public class GetResourceServlet extends HttpServlet &#123;
+
+    @Override
+    protected void doGet(HttpServletRequest request, HttpServletResponse response) throws IOException &#123;
+        response.setContentType(&quot;text/html;charset=utf-8&quot;);
+        PrintWriter out = response.getWriter();
+        ServletContext context=getServletContext();
+        String path=context.getRealPath(&quot;data.properties&quot;);
+        FileInputStream fis=new FileInputStream(path);
+        Properties pros=new Properties();
+        pros.load(fis);
+        String address=pros.getProperty(&quot;address&quot;);
+        String school=pros.getProperty(&quot;school&quot;);
+        out.println(&quot;地址：&quot;+address+&quot;&lt;br&gt;&quot;);
+        out.println(&quot;学校：&quot;+school);
+    &#125;
+
+    @Override
+    protected void doPost(HttpServletRequest request, HttpServletResponse response) throws IOException &#123;
+
+    &#125;
+&#125;
+
+注：这么详细的配置还看不懂的话，抓紧退学]]></content>
+      <categories>
+        <category>实验七</category>
+      </categories>
+      <tags>
+        <tag>Java</tag>
+        <tag>html</tag>
+        <tag>jsp</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>测试</title>
+    <url>/2024/05/29/%E6%B5%8B%E8%AF%95/</url>
+    <content><![CDATA[
+
 ]]></content>
   </entry>
 </search>
